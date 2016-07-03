@@ -11,73 +11,16 @@ class ControllerModuleCategory extends Controller {
 			$parts = array();
 		}
 
-//		if (isset($parts[0])) {
-//			$data['category_id'] = $parts[0];
-//		} else {
-//			$data['category_id'] = 0;
-//		}
-//
-//		if (isset($parts[1])) {
-//			$data['child_id'] = $parts[1];
-//		} else {
-//			$data['child_id'] = 0;
-//		}
-
 		$this->load->model('catalog/category');
 
 		$this->load->model('catalog/product');
 
-//		$data['categories'] = array();
-
-//		$categories = $this->model_catalog_category->getCategories(0);
-
 		$categs = $this->getCategRecursive(0, $parts);
 
-
-//		var_export($categs); die;
-		$data['categories'] = $categs; //$this->getChildCategoriesRecursive($categories);
-
-
-//		var_export($data); die;
+		$data['categories'] = $categs;
 
 		return $this->load->view('module/category', $data);
 	}
-
-//	protected function getChildCategoriesRecursive($categories)
-//	{
-//		foreach ($categories as $category) {
-//
-//			$filter_data = array(
-//				'filter_category_id' => $category['category_id'],
-//				'filter_sub_category' => true
-//			);
-//
-//			$data[$category['category_id']] = array(
-//				'category_id' => $category['category_id'],
-//				'name' => $category['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
-////				'children' => $children_data,
-//				'href' => $this->url->link('product/category', 'path=' . $category['category_id'])
-//			);
-//
-//			$children = $this->model_catalog_category->getCategories($category['category_id']);
-//
-//			if (!empty($children)) {
-////				foreach ($children as $child) {
-//					$data[$category['category_id']]['children'] = $this->getChildCategoriesRecursive($children);
-////					$filter_data = array('filter_category_id' => $child['category_id'], 'filter_sub_category' => true);
-////					$children_data[] = array(
-////						'category_id' => $child['category_id'],
-////						'name' => $child['name'] . ($this->config->get('config_product_count') ? ' (' . $this->model_catalog_product->getTotalProducts($filter_data) . ')' : ''),
-////						'href' => $this->url->link('product/category', 'path=' . $category['category_id'] . '_' . $child['category_id'])
-////					);
-////				}
-//			} else {
-//				$data[$category['category_id']]['children'] = array();
-//			}
-//		}
-//
-//		return $data;
-//	}
 
 	public function getCategRecursive($parentId, $selected, $parentParentId = 0, $rootPath = array())
 	{
