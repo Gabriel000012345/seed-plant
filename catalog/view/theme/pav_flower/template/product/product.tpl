@@ -82,6 +82,9 @@
               <?php if ($upc) { ?>
               <li><?php echo $text_upc; ?> <span><?php echo $upc; ?></span><hr/></li>
               <?php } ?>
+              <?php if ($ean) { ?>
+              <li><?php echo $text_ean; ?> <span><?php echo $ean; ?></span><hr/></li>
+              <?php } ?>
               <?php if ($manufacturer) { ?>
               <li><?php echo $text_manufacturer; ?> <a href="<?php echo $manufacturers; ?>"><?php echo $manufacturer; ?></a></li>
               <?php } ?>

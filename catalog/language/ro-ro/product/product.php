@@ -31,6 +31,7 @@ $_['text_semi_month']                         = 'jumătate de lună';
 $_['text_month']                              = 'lună';
 $_['text_year']                               = 'An';
 $_['text_upc']                               = 'Substanta activa:';
+$_['text_ean']                               = 'Grupa de maturitate:';
 
 // Entry
 $_['entry_qty']                               = 'Cantitate';

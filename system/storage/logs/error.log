@@ -498,3 +498,6 @@
 2016-07-02 9:50:10 - PHP Notice:  Undefined variable: category in C:\xampp\htdocs\seed-plant\upload\catalog\controller\module\category.php on line 94
 2016-07-02 9:50:10 - PHP Notice:  Undefined variable: category in C:\xampp\htdocs\seed-plant\upload\catalog\controller\module\category.php on line 94
 2016-07-02 9:50:10 - PHP Notice:  Undefined variable: category in C:\xampp\htdocs\seed-plant\upload\catalog\controller\module\category.php on line 94
+2016-07-18 13:27:31 - PHP Notice:  Undefined index: stock_status_id in C:\xampp\htdocs\seed-plant\upload\admin\model\catalog\product.php on line 130
+2016-07-18 13:27:31 - PHP Notice:  Undefined index: weight_class_id in C:\xampp\htdocs\seed-plant\upload\admin\model\catalog\product.php on line 130
+2016-07-18 13:27:31 - PHP Notice:  Undefined index: length_class_id in C:\xampp\htdocs\seed-plant\upload\admin\model\catalog\product.php on line 130
