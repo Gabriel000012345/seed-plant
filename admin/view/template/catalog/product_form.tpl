@@ -1388,7 +1388,8 @@ function addRecurring() {
 	html += '  </td>';
 	html += '</tr>';
 
-	$('#tab-recurring table tbody').append(html);
+	$('#tab-' +
+            ' table tbody').append(html);
 }
 //--></script>
   <script type="text/javascript"><!--
@@ -1399,7 +1400,12 @@ $('.date').datetimepicker({
 $('.time').datetimepicker({
 	pickDate: false
 });
-
+<?php foreach ($languages as $language) { ?>
+      CKEDITOR.replace( 'input-description<?php echo $language['language_id']; ?>', {
+        // Load the Simple Box plugin.
+//        extraPlugins: 'simplebox'
+      } );
+<?php } ?>
 $('.datetime').datetimepicker({
 	pickDate: true,
 	pickTime: true

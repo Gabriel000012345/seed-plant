@@ -501,3 +501,15 @@
 2016-07-18 13:27:31 - PHP Notice:  Undefined index: stock_status_id in C:\xampp\htdocs\seed-plant\upload\admin\model\catalog\product.php on line 130
 2016-07-18 13:27:31 - PHP Notice:  Undefined index: weight_class_id in C:\xampp\htdocs\seed-plant\upload\admin\model\catalog\product.php on line 130
 2016-07-18 13:27:31 - PHP Notice:  Undefined index: length_class_id in C:\xampp\htdocs\seed-plant\upload\admin\model\catalog\product.php on line 130
+2016-07-22 14:47:36 - PHP Notice:  Undefined index: stock_status_id in C:\xampp\htdocs\seed-plant\upload\admin\model\catalog\product.php on line 130
+2016-07-22 14:47:36 - PHP Notice:  Undefined index: weight_class_id in C:\xampp\htdocs\seed-plant\upload\admin\model\catalog\product.php on line 130
+2016-07-22 14:47:36 - PHP Notice:  Undefined index: length_class_id in C:\xampp\htdocs\seed-plant\upload\admin\model\catalog\product.php on line 130
+2016-07-22 15:00:32 - PHP Notice:  Undefined index: stock_status_id in C:\xampp\htdocs\seed-plant\upload\admin\model\catalog\product.php on line 130
+2016-07-22 15:00:32 - PHP Notice:  Undefined index: weight_class_id in C:\xampp\htdocs\seed-plant\upload\admin\model\catalog\product.php on line 130
+2016-07-22 15:00:32 - PHP Notice:  Undefined index: length_class_id in C:\xampp\htdocs\seed-plant\upload\admin\model\catalog\product.php on line 130
+2016-07-22 15:08:17 - PHP Notice:  Undefined index: stock_status_id in C:\xampp\htdocs\seed-plant\upload\admin\model\catalog\product.php on line 130
+2016-07-22 15:08:17 - PHP Notice:  Undefined index: weight_class_id in C:\xampp\htdocs\seed-plant\upload\admin\model\catalog\product.php on line 130
+2016-07-22 15:08:17 - PHP Notice:  Undefined index: length_class_id in C:\xampp\htdocs\seed-plant\upload\admin\model\catalog\product.php on line 130
+2016-07-25 14:55:24 - PHP Notice:  Undefined index: stock_status_id in C:\xampp\htdocs\seed-plant\upload\admin\model\catalog\product.php on line 130
+2016-07-25 14:55:24 - PHP Notice:  Undefined index: weight_class_id in C:\xampp\htdocs\seed-plant\upload\admin\model\catalog\product.php on line 130
+2016-07-25 14:55:24 - PHP Notice:  Undefined index: length_class_id in C:\xampp\htdocs\seed-plant\upload\admin\model\catalog\product.php on line 130

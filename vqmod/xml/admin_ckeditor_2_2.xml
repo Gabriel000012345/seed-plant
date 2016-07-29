@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modification>
+    <name>Admin CK Editor 2.2</name>
+    <id>adminckeditor</id>
+    <version>1.0</version>
+    <vqmver required="true">2.5.0</vqmver>
+    <author>Richard Vošický</author>  
+    <file path="admin/view/template/catalog/" name="product_form.tpl,category_form.tpl,information_form.tpl">
+
+        <!-- Add ckeditor.js file -->
+        <operation error="log">
+            <search position="before">
+                <![CDATA[<div class="page-header">]]>
+            </search>
+            <add>
+                <![CDATA[
+                   <script src="view/javascript/ckeditor/ckeditor.js"></script>
+                ]]>
+            </add>
+        </operation>
+    </file>
+
+    <!-- Replace the summernote -->
+    <file path="admin/view/template/" name="catalog/product_form.tpl,catalog/information_form.tpl,catalog/category_form.tpl">
+        <operation error="skip">
+            <search position="replace">
+                <![CDATA[summernote]]>
+            </search>
+            <add trim="true"></add>
+        </operation>
+		<operation error="skip">
+            <search position="before">
+                <![CDATA[
+                    <?php echo $footer; ?>
+                ]]>
+            </search>
+            <add>
+                <![CDATA[
+				    <script type="text/javascript">			
+                    CKEDITOR.replace('input-description<?php echo $language['language_id']; ?>', {
+                        filebrowserBrowseUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>',
+                        filebrowserImageBrowseUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>',
+                        filebrowserFlashBrowseUrl: 'index.php?route=common/filemanager&token=<?php echo $token; ?>',
+                    });
+					CKEDITOR.on('dialogDefinition', function (event)
+        {
+            var editor = event.editor;
+            var dialogDefinition = event.data.definition;
+            var dialogName = event.data.name;
+
+            var tabCount = dialogDefinition.contents.length;
+            for (var i = 0; i < tabCount; i++) {
+                var browseButton = dialogDefinition.contents[i].get('browse');
+
+                if (browseButton !== null) {
+                    browseButton.hidden = false;
+                    browseButton.onClick = function() {
+						$('#modal-image').remove();
+						$.ajax({
+							url: 'index.php?route=common/filemanager&token=<?php echo $token; ?>&ckedialog='+this.filebrowser.target,
+							dataType: 'html',
+							success: function(html) {
+								$('body').append('<div id="modal-image" style="z-index: 10020;" class="modal">' + html + '</div>');
+								$('#modal-image').modal('show');
+							}
+						});	
+					}
+                }
+            }
+        });
+					</script>
+                ]]>
+            </add>
+        </operation>
+    </file>
+	<file name="admin/controller/common/filemanager.php">
+		<operation>
+			<search position="after" offset="1"><![CDATA[	
+			$url .= '&thumb=' . $this->request->get['thumb'];	
+			]]></search>
+			<add><![CDATA[
+		if (isset($this->request->get['ckedialog'])) {
+			$url .= '&ckedialog=' . $this->request->get['ckedialog'];
+		}
+          ]]></add>
+		</operation>
+		<operation>
+			<search position="after" offset="3"><![CDATA[
+			$data['thumb'] = $this->request->get['thumb'];
+			]]></search>
+			<add><![CDATA[
+		if (isset($this->request->get['ckedialog'])) {
+			$data['ckedialog'] = $this->request->get['ckedialog'];
+		} else {
+			$data['ckedialog'] = '';
+		}
+        ]]></add>
+		</operation>
+	</file>
+	
+	<file name="admin/view/template/common/filemanager.tpl">		
+		<operation>
+			<search position="before"><![CDATA[			
+			<?php if ($target) { ?>			
+			]]></search>
+			<add><![CDATA[
+<?php if ($ckedialog) { ?>			
+$('a.thumbnail').on('click', function(e) {
+	e.preventDefault();
+		dialog = CKEDITOR.dialog.getCurrent();
+			var targetElement = '<?php echo $ckedialog; ?>' || null;
+			var target = targetElement.split( ':' );
+			dialog.setValueOf( target[ 0 ], target[ 1 ], this.getAttribute('href') );
+	$('#modal-image').modal('hide');
+});
+<?php } ?>
+          ]]></add>
+	  </operation>
+	</file>
+	
+</modification>

@@ -1,5 +1,5 @@
-<div class="tab-v1 space-padding-tb-30 tab-detail">  
-  <ul class="nav nav-tabs">
+<div class="tab-v1 space-padding-tb-0 tab-detail">
+  <!--<ul class="nav nav-tabs">
     <li class="active"><a href="#tab-description" data-toggle="tab"><?php echo $tab_description; ?></a></li>
     <?php if ($attribute_groups) { ?>
     <li><a href="#tab-specification" data-toggle="tab"><?php echo $tab_attribute; ?></a></li>
@@ -10,10 +10,14 @@
     <?php if( $productConfig['enable_product_customtab'] && isset($productConfig['product_customtab_name'][$languageID]) ) { ?>
         <li><a href="#tab-customtab" data-toggle="tab"><?php echo $productConfig['product_customtab_name'][$languageID]; ?><span class="triangle-bottomright"></span></a></li>
     <?php } ?>
-  </ul>
-  <div class="tab-content">
+  </ul>-->
+  <div class="tab-content1">
+    <?php if ($description != '') { ?>
+    <h3><?php echo $tab_description; ?></h3>
+    <?php } ?>
     <div class="tab-pane active" id="tab-description"><?php echo $description; ?></div>
     <?php if ($attribute_groups) { ?>
+    <h3><?php echo $tab_attribute; ?></h3>
     <div class="tab-pane" id="tab-specification">
       <table class="table table-bordered">
         <?php foreach ($attribute_groups as $attribute_group) { ?>

@@ -1,2 +1,3 @@
 system/storage/
+system/storage/logs/*
 image/cache/

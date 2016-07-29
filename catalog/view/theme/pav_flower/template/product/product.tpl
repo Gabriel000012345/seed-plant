@@ -92,14 +92,14 @@
               <?php if ($reward) { ?>
               <li><?php echo $text_reward; ?> <span><?php echo $reward; ?></span></li>
               <?php } ?>
-              <li><?php echo $text_stock; ?> <span><?php echo $stock; ?></span></li>
+              <!--<li><?php echo $text_stock; ?> <span><?php echo $stock; ?></span></li>-->
             </ul>
 
             <?php if ($price) { ?>
               <ul class="list-unstyled">
                 <?php if (!$special) { ?>
                 <li>
-                  <h4><?php echo $price; ?></h4>
+                  <h3><?php echo $price; ?></h3>
                 </li>
                 <?php } else { ?>
                 <li><span style="text-decoration: line-through;"><?php echo $price; ?></span></li>
@@ -266,8 +266,9 @@
 
               <hr>
               
-              <div class="product-buttons-wrap">
-                <div class="product-qyt-action space-10">
+              <div class="action product-buttons-wrap">
+
+                <div class="pull-left product-qyt-action space-10">
                   <label class="control-label qty"><?php echo $entry_qty; ?>:</label>
                   <div class="quantity-adder">
                     <div class="add-down add-action">
@@ -279,30 +280,32 @@
                     <div class="add-up add-action">
                         <i class="fa fa-plus"></i>
                     </div>
-                  </div>               
+                  </div>
+
                 </div>
-           
-                <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />                
+                <div class="cart pull-left space-right-15">
+                  <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary"><?php echo $button_cart; ?></button>
+                </div>
+                <div class="pull-left space-right-10">
+                  <a class="btn btn-inverse-light" data-toggle="tooltip" class="wishlist" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product_id; ?>');"><span><i class="fa fa-heart"></i></span></a>
+                </div>
+
+                <input type="hidden" name="product_id" value="<?php echo $product_id; ?>" />
                  
                 <div class="action clearfix">
-                    <div class="cart pull-left space-right-15">
-                      <button type="button" id="button-cart" data-loading-text="<?php echo $text_loading; ?>" class="btn btn-primary"><?php echo $button_cart; ?></button>
-                    </div>
-                    <div class="pull-left space-right-10">
-                      <a class="btn btn-inverse-light" data-toggle="tooltip" class="wishlist" title="<?php echo $button_wishlist; ?>" onclick="wishlist.add('<?php echo $product_id; ?>');"><span><i class="fa fa-heart"></i></span></a>
-                    </div>
-                    <div class="pull-left">                      
+
+                   <!-- <div class="pull-left">
                       <a class="btn btn-inverse-light" data-toggle="tooltip" class="compare" title="<?php echo $button_compare; ?>" onclick="compare.add('<?php echo $product_id; ?>');"><span><i class="fa fa-exchange"></i></span></a>
-                    </div>
+                    </div>-->
                 </div>
                 <hr>
 
                 <!-- AddThis Button BEGIN -->
-                <div class="share clearfix">
+               <!-- <div class="share clearfix">
                   <label class="control-label pull-left"><?php echo $objlang->get('text_social'); ?></label>
                   <div class="addthis_toolbox addthis_default_style pull-right"><a class="addthis_button_facebook_like" fb:like:layout="button_count"></a> <a class="addthis_button_tweet"></a> <a class="addthis_button_pinterest_pinit"></a> <a class="addthis_counter addthis_pill_style"></a></div>
                   <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-515eeaf54693130e"></script>
-                </div>                
+                </div>   -->
                 <!-- AddThis Button END -->
 
               </div>  
