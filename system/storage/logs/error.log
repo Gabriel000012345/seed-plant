@@ -1421,3 +1421,4 @@
 2016-10-06 7:58:30 - PHP Notice:  Undefined property: Template\Basic::$config in C:\xampp\htdocs\seed-plant\upload\admin\view\template\shipping\fancourier.tpl on line 338
 2016-10-06 8:06:48 - PHP Notice:  Undefined property: Template\Basic::$config in C:\xampp\htdocs\seed-plant\upload\admin\view\template\shipping\fancourier.tpl on line 338
 2016-10-06 8:09:28 - PHP Notice:  Undefined property: Template\Basic::$config in C:\xampp\htdocs\seed-plant\upload\admin\view\template\shipping\fancourier.tpl on line 338
+2016-10-06 8:47:08 - PHP Warning:  ftp_connect(): php_network_getaddresses: getaddrinfo failed: No such host is known.  in C:\xampp\htdocs\seed-plant\upload\admin\controller\extension\installer.php on line 292
