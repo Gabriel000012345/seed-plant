@@ -341,7 +341,7 @@ class ModelCatalogProduct extends Model {
 	}
 
 	public function getProducts($data = array()) {
-		$sql = "SELECT * FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "'";
+		$sql = "SELECT p.*, pd.*, cd.name as categ_name, c.category_id FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN oc_product_to_category p2c ON (p.product_id = p2c.product_id) LEFT JOIN oc_category c on (p2c.category_id = c.category_id) LEFT JOIN oc_category_description cd on c.category_id = cd.category_id WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "'";
 
 		if (!empty($data['filter_name'])) {
 			$sql .= " AND pd.name LIKE '" . $this->db->escape($data['filter_name']) . "%'";
@@ -357,6 +357,10 @@ class ModelCatalogProduct extends Model {
 
 		if (isset($data['filter_quantity']) && !is_null($data['filter_quantity'])) {
 			$sql .= " AND p.quantity = '" . (int)$data['filter_quantity'] . "'";
+		}
+
+		if (isset($data['filter_category']) && !is_null($data['filter_category'])) {
+			$sql .= " AND cd.name LIKE '%" . $data['filter_category'] . "%'";
 		}
 
 		if (isset($data['filter_status']) && !is_null($data['filter_status'])) {
@@ -605,7 +609,8 @@ class ModelCatalogProduct extends Model {
 	}
 
 	public function getTotalProducts($data = array()) {
-		$sql = "SELECT COUNT(DISTINCT p.product_id) AS total FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id)";
+
+		$sql = "SELECT COUNT(DISTINCT p.product_id) AS total FROM " . DB_PREFIX . "product p LEFT JOIN " . DB_PREFIX . "product_description pd ON (p.product_id = pd.product_id) LEFT JOIN oc_product_to_category p2c ON (p.product_id = p2c.product_id) LEFT JOIN oc_category c on (p2c.category_id = c.category_id) LEFT JOIN oc_category_description cd on c.category_id = cd.category_id";
 
 		$sql .= " WHERE pd.language_id = '" . (int)$this->config->get('config_language_id') . "'";
 
@@ -623,6 +628,10 @@ class ModelCatalogProduct extends Model {
 
 		if (isset($data['filter_quantity']) && !is_null($data['filter_quantity'])) {
 			$sql .= " AND p.quantity = '" . (int)$data['filter_quantity'] . "'";
+		}
+
+		if (isset($data['filter_category']) && !is_null($data['filter_category'])) {
+			$sql .= " AND cd.name LIKE '%" . $data['filter_category'] . "%'";
 		}
 
 		if (isset($data['filter_status']) && !is_null($data['filter_status'])) {

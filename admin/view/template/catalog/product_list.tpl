@@ -69,6 +69,10 @@
                   <?php } ?>
                 </select>
               </div>
+              <div class="form-group">
+                <label class="control-label" for="input-category"><?php echo $entry_category; ?></label>
+                <input type="text" name="filter_category" value="<?php echo $filter_category; ?>" placeholder="<?php echo $entry_category; ?>" id="input-category" class="form-control" />
+              </div>
               <button type="button" id="button-filter" class="btn btn-primary pull-right"><i class="fa fa-search"></i> <?php echo $button_filter; ?></button>
             </div>
           </div>
@@ -90,6 +94,7 @@
                     <?php } else { ?>
                     <a href="<?php echo $sort_model; ?>"><?php echo $column_model; ?></a>
                     <?php } ?></td>
+                  <td class="text-left"><?php echo 'Categorie'; ?></td>
                   <td class="text-right"><?php if ($sort == 'p.price') { ?>
                     <a href="<?php echo $sort_price; ?>" class="<?php echo strtolower($order); ?>"><?php echo $column_price; ?></a>
                     <?php } else { ?>
@@ -124,6 +129,7 @@
                     <?php } ?></td>
                   <td class="text-left"><?php echo $product['name']; ?></td>
                   <td class="text-left"><?php echo $product['model']; ?></td>
+                  <td class="text-left"><?php echo $product['category_name']; ?></td>
                   <td class="text-right"><?php if ($product['special']) { ?>
                     <span style="text-decoration: line-through;"><?php echo $product['price']; ?></span><br/>
                     <div class="text-danger"><?php echo $product['special']; ?></div>
@@ -184,6 +190,12 @@ $('#button-filter').on('click', function() {
 	if (filter_quantity) {
 		url += '&filter_quantity=' + encodeURIComponent(filter_quantity);
 	}
+
+    var filter_category = $('input[name=\'filter_category\']').val();
+
+    if (filter_category) {
+      url += '&filter_category=' + encodeURIComponent(filter_category);
+    }
 
 	var filter_status = $('select[name=\'filter_status\']').val();
 

@@ -99,7 +99,13 @@
               <ul class="list-unstyled">
                 <?php if (!$special) { ?>
                 <li>
-                  <h3><?php echo $price; ?></h3>
+                  <h3 class="pull-left"><?php echo $price; ?></h3>
+                  <?php if ($uom != '') { ?>
+                  <h3 class="pull-left" style="margin-left: 5px;">
+                    <span><?php echo ' / ' . $uom ?></span>
+                  </h3>
+                  <?php } ?>
+                  <div class="clearfix"></div>
                 </li>
                 <?php } else { ?>
                 <li><span style="text-decoration: line-through;"><?php echo $price; ?></span></li>
@@ -155,7 +161,9 @@
                       <input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>" />
                       <?php echo $option_value['name']; ?>
                       <?php if ($option_value['price']) { ?>
-                      (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
+                      (<?php //echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>
+                      <?php echo "" ?>
+                        <span><?php echo ' / ' . $uom ?></span>)
                       <?php } ?>
                     </label>
                   </div>

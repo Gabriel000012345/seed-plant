@@ -286,6 +286,13 @@ class ControllerProductProduct extends Controller {
 			$data['points'] = $product_info['points'];
 			$data['description'] = html_entity_decode($product_info['description'], ENT_QUOTES, 'UTF-8');
 
+			$this->load->model('localisation/weight_class');
+			$weight_class = $this->model_localisation_weight_class->getWeightClass($product_info['weight_class_id']);
+			$data['uom'] = '';
+			if (isset($weight_class['unit'])) {
+				$data['uom'] = $weight_class['unit'];
+			}
+
 			if ($product_info['quantity'] <= 0) {
 				$data['stock'] = $product_info['stock_status'];
 			} elseif ($this->config->get('config_stock_display')) {
@@ -367,7 +374,7 @@ class ControllerProductProduct extends Controller {
 							'name'                    => $option_value['name'],
 							'image'                   => $this->model_tool_image->resize($option_value['image'], 50, 50),
 							'price'                   => $price,
-							'price_prefix'            => $option_value['price_prefix']
+//							'price_prefix'            => $option_value['price_prefix']
 						);
 					}
 				}

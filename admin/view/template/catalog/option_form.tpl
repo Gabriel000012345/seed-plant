@@ -113,6 +113,7 @@
             <thead>
               <tr>
                 <td class="text-left required"><?php echo $entry_option_value; ?></td>
+                <td class="text-left"><?php echo 'Raport / uom'; ?></td>
                 <td class="text-left"><?php echo $entry_image; ?></td>
                 <td class="text-right"><?php echo $entry_sort_order; ?></td>
                 <td></td>
@@ -131,6 +132,7 @@
                   <div class="text-danger"><?php echo $error_option_value[$option_value_row][$language['language_id']]; ?></div>
                   <?php } ?>
                   <?php } ?></td>
+                <td class="text-right"><input type="text" name="option_value[<?php echo $option_value_row; ?>][raport]" value="<?php echo $option_value['raport']; ?>" class="form-control" /></td>
                 <td class="text-left"><a href="" id="thumb-image<?php echo $option_value_row; ?>" data-toggle="image" class="img-thumbnail"><img src="<?php echo $option_value['thumb']; ?>" alt="" title="" data-placeholder="<?php echo $placeholder; ?>" /></a>
                   <input type="hidden" name="option_value[<?php echo $option_value_row; ?>][image]" value="<?php echo $option_value['image']; ?>" id="input-image<?php echo $option_value_row; ?>" /></td>
                 <td class="text-right"><input type="text" name="option_value[<?php echo $option_value_row; ?>][sort_order]" value="<?php echo $option_value['sort_order']; ?>" class="form-control" /></td>

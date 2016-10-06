@@ -1797,6 +1797,10 @@ th {
   vertical-align: bottom;
   border-bottom: 2px solid #ddd;
 }
+.tab-pane > .table > thead > tr > th {
+  vertical-align: middle;
+  text-align: center;
+}
 .table > caption + thead > tr:first-child > th,
 .table > caption + thead > tr:first-child > td,
 .table > colgroup + thead > tr:first-child > th,
