@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<modification>
+
+  <name>Urgent Cargus</name>
+  <version>3.0</version>
+  <code>1454333624</code>
+  <author>Urgent Cargus SA</author>
+  <link>https://www.urgentcargus.ro</link>
+
+  <file path="admin/language/english/*.php">
+    <operation>
+      <search>
+        <![CDATA[<?php]]>
+      </search>
+      <add position="after">
+        <![CDATA[
+                $_['text_urgentcargus_index'] = 'Urgent Cargus';
+                $_['text_urgentcargus_comanda'] = 'Current Order';
+                $_['text_urgentcargus_istoric'] = 'Order History';
+                $_['text_urgentcargus_preferinte'] = 'Preferences';
+                $_['text_urgentcargus_setari'] = 'Configuration';
+                $_['add_to_urgentcargus'] = 'Add to Urgent Cargus delivery list';
+                ]]>
+      </add>
+    </operation>
+  </file>
+  
+  <file path="admin/language/en-gb/*.php">
+    <operation>
+      <search>
+        <![CDATA[<?php]]>
+      </search>
+      <add position="after">
+        <![CDATA[
+                $_['text_urgentcargus_index'] = 'Urgent Cargus';
+                $_['text_urgentcargus_comanda'] = 'Current Order';
+                $_['text_urgentcargus_istoric'] = 'Order History';
+                $_['text_urgentcargus_preferinte'] = 'Preferences';
+                $_['text_urgentcargus_setari'] = 'Configuration';
+                $_['add_to_urgentcargus'] = 'Add to Urgent Cargus delivery list';
+                ]]>
+      </add>
+    </operation>
+  </file>
+  
+  <file path="admin/language/romana/*.php">
+    <operation>
+      <search>
+        <![CDATA[<?php]]>
+      </search>
+      <add position="after">
+        <![CDATA[
+                $_['text_urgentcargus_index'] = 'Urgent Cargus';
+                $_['text_urgentcargus_comanda'] = 'Comanda Curenta';
+                $_['text_urgentcargus_istoric'] = 'Istoric Comenzi';
+                $_['text_urgentcargus_preferinte'] = 'Preferinte';
+                $_['text_urgentcargus_setari'] = 'Configurare';
+                $_['add_to_urgentcargus'] = 'Adauga in lista de livrari Urgent Cargus';
+                ]]>
+      </add>
+    </operation>
+  </file>
+
+  <file path="admin/language/ro-ro/*.php">
+    <operation>
+      <search>
+        <![CDATA[<?php]]>
+      </search>
+      <add position="after">
+        <![CDATA[
+                $_['text_urgentcargus_index'] = 'Urgent Cargus';
+                $_['text_urgentcargus_comanda'] = 'Comanda Curenta';
+                $_['text_urgentcargus_istoric'] = 'Istoric Comenzi';
+                $_['text_urgentcargus_preferinte'] = 'Preferinte';
+                $_['text_urgentcargus_setari'] = 'Configurare';
+                $_['add_to_urgentcargus'] = 'Adauga in lista de livrari Urgent Cargus';
+                ]]>
+      </add>
+    </operation>
+  </file>
+
+  <file path="admin/view/template/common/header.tpl">
+    <operation>
+      <search>
+        <![CDATA[</head>]]>
+      </search>
+      <add position="before">
+        <![CDATA[<script type="text/javascript" src="view/javascript/urgent_cargus.js"></script>]]>
+      </add>
+    </operation>
+  </file>
+
+  <file path="admin/view/template/common/menu.tpl">
+    <operation>
+      <search><![CDATA[<li id="reports">]]></search>
+      <add position="before">
+        <![CDATA[
+                <li id="urgent"><a class="parent"><i class="fa fa-truck fa-fw"></i> <span><?php echo $text_urgentcargus_index; ?></span></a>
+                    <ul>
+                        <li><a href="<?php echo $urgent_comanda; ?>"><?php echo $text_urgentcargus_comanda; ?></a></li>
+                        <li><a href="<?php echo $urgent_istoric; ?>"><?php echo $text_urgentcargus_istoric; ?></a></li>
+                        <li><a href="<?php echo $urgent_preferinte; ?>"><?php echo $text_urgentcargus_preferinte; ?></a></li>
+                        <li><a href="<?php echo $urgent_setari; ?>"><?php echo $text_urgentcargus_setari; ?></a></li>
+                    </ul>
+                </li>
+                ]]>
+      </add>
+    </operation>
+  </file>
+
+  <file path="admin/controller/common/menu.php">
+    <operation>
+      <search><![CDATA[$this->load->language('common/menu');]]></search>
+      <add position="after">
+        <![CDATA[
+                $data['text_urgentcargus_index'] = $this->language->get('text_urgentcargus_index');
+                $data['text_urgentcargus_comanda'] = $this->language->get('text_urgentcargus_comanda');
+                $data['text_urgentcargus_istoric'] = $this->language->get('text_urgentcargus_istoric');
+                $data['text_urgentcargus_preferinte'] = $this->language->get('text_urgentcargus_preferinte');
+                $data['text_urgentcargus_setari'] = $this->language->get('text_urgentcargus_setari');
+                $data['urgent_comanda'] = $this->url->link('urgentcargus/comanda', 'token=' . $this->session->data['token'], 'SSL');
+                $data['urgent_istoric'] = $this->url->link('urgentcargus/istoric', 'token=' . $this->session->data['token'], 'SSL');
+                $data['urgent_preferinte'] = $this->url->link('urgentcargus/preferinte', 'token=' . $this->session->data['token'], 'SSL');
+                $data['urgent_setari'] = $this->url->link('shipping/urgentcargus', 'token=' . $this->session->data['token'], 'SSL');
+                ]]>
+      </add>
+    </operation>
+  </file>
+
+  <file path="catalog/view/theme/*/template/common/header.tpl">
+    <operation>
+      <search>
+        <![CDATA[</head>]]>
+      </search>
+      <add position="before">
+        <![CDATA[<script type="text/javascript" src="catalog/view/javascript/urgent_cargus.js"></script>]]>
+      </add>
+    </operation>
+  </file>
+
+  <file path="catalog/controller/checkout/confirm.php">
+    <operation>
+      <search>
+        <![CDATA[if (isset($this->session->data['shipping_method']['title'])) {]]>
+      </search>
+      <add position="before">
+        <![CDATA[
+                if ($this->session->data['shipping_method']['code'] == 'urgentcargus.destinatie' || $this->session->data['shipping_method']['code'] == 'urgentcargus.franciza') {
+                    $this->load->model('shipping/urgentcargus');
+                    if ($this->session->data['payment_method']['code'] == 'cod') $cod = 1; else $cod = 0;                    
+                    $quote = $this->{'model_shipping_urgentcargus'}->getQuote($this->session->data['shipping_address'], $cod);
+                    $this->session->data['shipping_method'] = $quote['quote'][str_replace('urgentcargus.', '', $this->session->data['shipping_method']['code'])];
+                    $transport_initial = 0;
+                    $transport_updatat = 0;
+                    foreach ($order_data['totals'] as $key => $value) {
+                        if ($value['code'] == 'shipping' && strpos($value['title'], 'Urgent Cargus') !== false) {
+                            $transport_initial = $order_data['totals'][$key]['value'];
+                            $transport_updatat = $quote['quote'][str_replace('urgentcargus.', '', $this->session->data['shipping_method']['code'])]['cost'];
+                            $order_data['totals'][$key]['value'] = $quote['quote'][str_replace('urgentcargus.', '', $this->session->data['shipping_method']['code'])]['cost'];
+                        }
+                        if ($value['code'] == 'total') {
+                            $total_initial = $order_data['totals'][$key]['value'];
+                            $order_data['totals'][$key]['value'] = $order_data['totals'][$key]['value'] - $transport_initial + $transport_updatat;
+                            $total = $order_data['totals'][$key]['value'];
+                        }
+                    }
+                }
+                ]]>
+      </add>
+    </operation>
+  </file>
+
+  <file path="catalog/model/total/coupon.php">
+    <operation>
+      <search>
+        <![CDATA[public function getTotal(&$total_data, &$total, &$taxes) {]]>
+      </search>
+      <add position="after">
+        <![CDATA[
+                $this->language->load('shipping/urgent');
+                
+                if (isset($this->session->data['coupon_urgentcargus'])) {
+                    $total_data[] = array(
+                        'code'          => 'coupon',
+                        'title'         => $this->language->get('text_discount_urgent'),
+                        'text'          => $this->currency->format(-$this->session->data['coupon_urgentcargus']),
+                        'value'         => $this->session->data['coupon_urgentcargus'],
+                        'sort_order'    => 5
+                    );
+                    $total -= $this->session->data['coupon_urgentcargus'];
+                }
+                ]]>
+      </add>
+    </operation>
+  </file>
+
+  <file path="admin/controller/sale/order.php">
+    <operation>
+      <search>
+        <![CDATA[$results = $this->model_sale_order->getOrders($filter_data);]]>
+      </search>
+      <add position="after">
+        <![CDATA[
+                $data['add_to_urgentcargus'] = $this->language->get('add_to_urgentcargus');
+                $data['opencart_token'] = $this->session->data['token'];
+                ]]>
+      </add>
+    </operation>
+  </file>
+
+  <file path="admin/view/template/sale/order_list.tpl">
+    <operation>
+      <search>
+        <![CDATA[<div class="pull-right">]]>
+      </search>
+      <add position="after">
+        <![CDATA[
+                <button style="margin-left: 20px;" token="<?php echo $opencart_token; ?>" type="button" id="add_urgent_cargus" class="btn btn-primary pull-right"><i class="fa fa-add"></i> <?php echo $add_to_urgentcargus; ?></button>
+                ]]>
+      </add>
+    </operation>
+  </file>
+
+</modification>

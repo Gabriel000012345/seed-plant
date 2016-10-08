@@ -1,4 +1,4 @@
-system/storage/
-system/storage/logs/*
+system/storage/logs/error.log
+system/storage/logs/openbay.log
 image/cache/
 .idea/*
