@@ -44,7 +44,8 @@
               </tr>
             </thead>
             <tbody>
-              <?php foreach ($products as $product) { ?>
+            <?php //var_export($products);?>
+            <?php foreach ($products as $product) { ?>
               <tr>
                 <td class="text-center"><?php if ($product['thumb']) { ?>
                   <a href="<?php echo $product['href']; ?>"><img src="<?php echo $product['thumb']; ?>" alt="<?php echo $product['name']; ?>" title="<?php echo $product['name']; ?>" class="img-thumbnail" /></a>

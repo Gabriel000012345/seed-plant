@@ -149,7 +149,16 @@
               <div class="form-group">
                 <label class="col-sm-2 control-label" for="input-price"><?php echo $entry_price; ?></label>
                 <div class="col-sm-10">
-                  <input type="text" name="price" value="<?php echo $price; ?>" placeholder="<?php echo $entry_price; ?>" id="input-price" class="form-control" />
+                  <input type="text" name="price" value="<?php echo $price; ?>" style="width: 49%;" placeholder="<?php echo $entry_price; ?>" id="input-price" class="form-control pull-left" />
+                  <span class="pull-left" style="font-size: 22px;">&nbsp;/&nbsp;</span>
+                  <select name="price_per_uom"  placeholder="<?php echo $price_per_uom; ?>" style="width: 49%;" id="input-price_per_uom" class="form-control pull-left">
+                    <option <?php if ($price_per_uom == 'litru') echo 'selected="selected"' ?> value="litru">Litru</option>
+                    <option <?php if ($price_per_uom == 'kg') echo 'selected="selected"' ?> value="kg">Kilogram</option>
+                    <option <?php if ($price_per_uom == 'tona') echo 'selected="selected"' ?> value="tona">Tona</option>
+                    <option <?php if ($price_per_uom == 'pachet') echo 'selected="selected"' ?> value="pachet">Pachet</option>
+                    <option <?php if ($price_per_uom == 'flacon') echo 'selected="selected"' ?> value="flacon">Flacon</option>
+                    <option <?php if ($price_per_uom == 'gram') echo 'selected="selected"' ?> value="gram">Gram</option>
+                  </select>
                 </div>
               </div>
               <div class="form-group">

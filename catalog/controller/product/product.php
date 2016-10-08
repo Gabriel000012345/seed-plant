@@ -332,6 +332,8 @@ class ControllerProductProduct extends Controller {
 				$data['price'] = false;
 			}
 
+			$data['price_per_uom'] = $product_info['price_per_uom'];
+
 			if ((float)$product_info['special']) {
 				$data['special'] = $this->currency->format($this->tax->calculate($product_info['special'], $product_info['tax_class_id'], $this->config->get('config_tax')), $this->session->data['currency']);
 			} else {

@@ -102,7 +102,7 @@
                   <h3 class="pull-left"><?php echo $price; ?></h3>
                   <?php if ($uom != '') { ?>
                   <h3 class="pull-left" style="margin-left: 5px;">
-                    <span><?php echo ' / ' . $uom ?></span>
+                    <span><?php echo ' / ' . $price_per_uom ?></span>
                   </h3>
                   <?php } ?>
                   <div class="clearfix"></div>
@@ -143,7 +143,7 @@
                     <?php foreach ($option['product_option_value'] as $option_value) { ?>
                     <option value="<?php echo $option_value['product_option_value_id']; ?>"><?php echo $option_value['name']; ?>
                     <?php if ($option_value['price']) { ?>
-                    (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
+                      &nbsp;-&nbsp;<?php echo $option_value['price']; ?>
                     <?php } ?>
                     </option>
                     <?php } ?>
@@ -161,9 +161,9 @@
                       <input type="radio" name="option[<?php echo $option['product_option_id']; ?>]" value="<?php echo $option_value['product_option_value_id']; ?>" />
                       <?php echo $option_value['name']; ?>
                       <?php if ($option_value['price']) { ?>
-                      (<?php //echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>
-                      <?php echo "" ?>
-                        <span><?php echo ' / ' . $uom ?></span>)
+                      &nbsp;-&nbsp;<?php echo $option_value['price']; ?>
+
+                        <!--<span><?php echo ' / ' . $uom ?></span>)-->
                       <?php } ?>
                     </label>
                   </div>
@@ -181,7 +181,7 @@
                       <input type="checkbox" name="option[<?php echo $option['product_option_id']; ?>][]" value="<?php echo $option_value['product_option_value_id']; ?>" />
                       <?php echo $option_value['name']; ?>
                       <?php if ($option_value['price']) { ?>
-                      (<?php echo $option_value['price_prefix']; ?><?php echo $option_value['price']; ?>)
+                        &nbsp;-&nbsp;<?php echo $option_value['price']; ?>
                       <?php } ?>
                     </label>
                   </div>

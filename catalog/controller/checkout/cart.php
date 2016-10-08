@@ -95,7 +95,7 @@ class ControllerCheckoutCart extends Controller {
 				}
 
 				$option_data = array();
-
+//var_export($product['option']); die;
 				foreach ($product['option'] as $option) {
 					if ($option['type'] != 'file') {
 						$value = $option['value'];
@@ -111,17 +111,19 @@ class ControllerCheckoutCart extends Controller {
 
 					$option_data[] = array(
 						'name'  => $option['name'],
-						'value' => (utf8_strlen($value) > 20 ? utf8_substr($value, 0, 20) . '..' : $value)
+						'value' => (utf8_strlen($value) > 20 ? utf8_substr($value, 0, 20) . '..' : $value),
+						'price' => $this->currency->format($this->tax->calculate($option['price'], $product['tax_class_id'], $this->config->get('config_tax')), $this->session->data['currency'])
 					);
 				}
-
 				// Display prices
+				if (isset($option_data[0]['price'])) {
+					$product['price'] = $option_data[0]['price'];
+				}
 				if ($this->customer->isLogged() || !$this->config->get('config_customer_price')) {
 					$price = $this->currency->format($this->tax->calculate($product['price'], $product['tax_class_id'], $this->config->get('config_tax')), $this->session->data['currency']);
 				} else {
 					$price = false;
 				}
-
 				// Display prices
 				if ($this->customer->isLogged() || !$this->config->get('config_customer_price')) {
 					$total = $this->currency->format($this->tax->calculate($product['price'], $product['tax_class_id'], $this->config->get('config_tax')) * $product['quantity'], $this->session->data['currency']);
@@ -200,7 +202,7 @@ class ControllerCheckoutCart extends Controller {
 				$sort_order = array();
 
 				$results = $this->model_extension_extension->getExtensions('total');
-
+//var_export($results); die;
 				foreach ($results as $key => $value) {
 					$sort_order[$key] = $this->config->get($value['code'] . '_sort_order');
 				}
