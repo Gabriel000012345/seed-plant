@@ -102,7 +102,7 @@
                   <h3 class="pull-left"><?php echo $price; ?></h3>
                   <?php if ($uom != '') { ?>
                   <h3 class="pull-left" style="margin-left: 5px;">
-                    <span><?php echo ' / ' . $price_per_uom ?></span>
+                    <span><?php echo ' / ' . $uom ?></span>
                   </h3>
                   <?php } ?>
                   <div class="clearfix"></div>

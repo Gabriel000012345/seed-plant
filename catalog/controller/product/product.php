@@ -289,8 +289,8 @@ class ControllerProductProduct extends Controller {
 			$this->load->model('localisation/weight_class');
 			$weight_class = $this->model_localisation_weight_class->getWeightClass($product_info['weight_class_id']);
 			$data['uom'] = '';
-			if (isset($weight_class['unit'])) {
-				$data['uom'] = $weight_class['unit'];
+			if (isset($weight_class['title'])) {
+				$data['uom'] = $weight_class['title'];
 			}
 
 			if ($product_info['quantity'] <= 0) {
@@ -332,7 +332,6 @@ class ControllerProductProduct extends Controller {
 				$data['price'] = false;
 			}
 
-			$data['price_per_uom'] = $product_info['price_per_uom'];
 
 			if ((float)$product_info['special']) {
 				$data['special'] = $this->currency->format($this->tax->calculate($product_info['special'], $product_info['tax_class_id'], $this->config->get('config_tax')), $this->session->data['currency']);

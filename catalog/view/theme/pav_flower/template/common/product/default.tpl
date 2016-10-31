@@ -29,17 +29,35 @@
             <?php } ?>
           </div>
         <?php } ?> 
-
+<?php //var_export($product); die; ?>
       <!-- price -->
       <?php if ($product['price']) { ?>
         <div class="price">
           <?php if (!$product['special']) {  ?>
-            <span class="price-new"><?php echo $product['price']; ?></span>
+            <span class="price-new"><?php echo $product['price']; ?>
+              <?php if ($product['uom']) { ?>
+              <span style="color: #ba9869; font-size: 16px; vertical-align: text-bottom; font-weight: normal;">
+              &nbsp;/&nbsp;<?php echo $product['uom']; ?>
+              </span>
+              <?php } ?>
+            </span>
             <?php if( preg_match( '#(\d+).?(\d+)#',  $product['price'], $p ) ) { ?> 
             <?php } ?>
           <?php } else { ?>
-            <span class="price-new"><?php echo $product['special']; ?></span>
-            <span class="price-old"><?php echo $product['price']; ?></span> 
+            <span class="price-new"><?php echo $product['special']; ?>
+              <?php if ($product['uom']) { ?>
+              <span style="color: #ba9869; font-size: 16px; vertical-align: text-bottom; font-weight: normal;">
+              &nbsp;/&nbsp;<?php echo $product['uom']; ?>
+              </span>
+              <?php } ?>
+            </span>
+            <span class="price-old"><?php echo $product['price']; ?>
+              <?php if ($product['uom']) { ?>
+              <span style="color: #ba9869; font-size: 16px; vertical-align: text-bottom; font-weight: normal;">
+              &nbsp;/&nbsp;<?php echo $product['uom']; ?>
+              </span>
+              <?php } ?>
+            </span>
             <?php if( preg_match( '#(\d+).?(\d+)#',  $product['special'], $p ) ) { ?> 
             <?php } ?>
 
