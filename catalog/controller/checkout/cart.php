@@ -115,10 +115,13 @@ class ControllerCheckoutCart extends Controller {
 						'price' => $this->currency->format($this->tax->calculate($option['price'], $product['tax_class_id'], $this->config->get('config_tax')), $this->session->data['currency'])
 					);
 				}
+//				var_export($product['price'] . ' -- ');
 				// Display prices
-				if (isset($option_data[0]['price'])) {
-					$product['price'] = $option_data[0]['price'];
-				}
+//				foreach ($option_data as $op_data) {
+//					if (isset($op_data['price'])) {
+//						$product['price'] += $op_data['price'];
+//					}
+//				}
 				if ($this->customer->isLogged() || !$this->config->get('config_customer_price')) {
 					$price = $this->currency->format($this->tax->calculate($product['price'], $product['tax_class_id'], $this->config->get('config_tax')), $this->session->data['currency']);
 				} else {
@@ -235,6 +238,7 @@ class ControllerCheckoutCart extends Controller {
 					'text'  => $this->currency->format($total['value'], $this->session->data['currency'])
 				);
 			}
+//			var_export($data);
 
 			$data['continue'] = $this->url->link('common/home');
 
