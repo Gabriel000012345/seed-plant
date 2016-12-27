@@ -88,7 +88,7 @@ class ControllerModulePavsliderlayer extends Controller {
 		);
 	}
 
-	public function index() {   
+	public function index() {
 		$this->preload();
 		$model = $this->model_pavsliderlayer_slider; 
 

@@ -2,5 +2,6 @@ system/storage/logs/error.log
 system/storage/logs/openbay.log
 system/storage/cache/*
 image/cache/
+system/cache
 .idea/*
 

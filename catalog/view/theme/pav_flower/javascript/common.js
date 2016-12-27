@@ -194,10 +194,10 @@ $(document).ready(function(){
   
   //search
   $('#search input[name=\'search\']').parent().find('button').on('click', function() {
-    url = $('base').attr('href') + 'index.php?route=product/search';
+    url = $('base').attr('href') + 'cauta';
     var value = $('#search input[name=\'search\']').val();
     if (value) {
-      url += '&search=' + encodeURIComponent(value);
+      url += '/' + encodeURIComponent(value);
     }
     location = url;
   });
