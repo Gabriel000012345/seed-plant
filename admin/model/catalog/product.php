@@ -33,7 +33,7 @@ class ModelCatalogProduct extends Model {
 				}
 			}
 		}
-
+//var_export($data['product_option']); die;
 		if (isset($data['product_option'])) {
 			foreach ($data['product_option'] as $product_option) {
 				if ($product_option['type'] == 'select' || $product_option['type'] == 'radio' || $product_option['type'] == 'checkbox' || $product_option['type'] == 'image') {

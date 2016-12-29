@@ -1276,6 +1276,7 @@ $('input[name=\'option\']').autocomplete({
 		});
 
 		option_row++;
+        option_value_row = 0;
 	}
 });
 //--></script>
@@ -1293,7 +1294,7 @@ function addOptionValue(option_row) {
 	html += '    <option value="0"><?php echo $text_no; ?></option>';
 	html += '  </select></td>';
 	html += '  <td class="text-right">';
-	html += '  <input type="text" name="product_option[<?php echo $option_row; ?>][product_option_value][<?php echo $option_value_row; ?>][price]" value="" placeholder="<?php echo $entry_price; ?>" class="form-control pull-left" />' +
+	html += '  <input type="text" name="product_option['+ option_row +'][product_option_value]['+ option_value_row +'][price]" value="" placeholder="<?php echo $entry_price; ?>" class="form-control pull-left" />' +
             '</td>';
 	html += '  <td class="text-right"><select name="product_option[' + option_row + '][product_option_value][' + option_value_row + '][points_prefix]" class="form-control">';
 	html += '    <option value="+">+</option>';
