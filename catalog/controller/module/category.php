@@ -61,8 +61,16 @@ class ControllerModuleCategory extends Controller {
 			$url = $this->url->link('product/category', 'path=' . $path);
 			$data .= '<li id="collapsable'. $category['category_id'] .'" class="panel no-border-bottom '. ( $parentId == 0 ? 'list-group-item accordion-group ' : 'small-arrow') . '">';
 
-			$data .= '<a href="' . $url . '" class="'. $aClass .'">' . $category['name'] . '</a>';
-			$data .= $this->getCategRecursive($category['category_id'], $selected, $parentParentId, $rootPath);
+
+			$childs = $this->getCategRecursive($category['category_id'], $selected, $parentParentId, $rootPath);
+			$cCateg = $this->model_catalog_category->getCategories($category['category_id']);
+			if (!empty($cCateg) && 1 == 2) {
+				$data .= '<span data-target="#accordion' . $category['category_id'] . '"
+							data-parent="#accordion' . $parentParentId . '" data-toggle="collapse" aria-expanded="true2">' . $category['name'] . '</span>';
+			} else {
+				$data .= '<a href="' . $url . '" class="'. $aClass .'">' . $category['name'] . '</a>';
+			}
+			$data .= $childs;
 			$data .= '</li>';
 		}
 		$data .= '</ul>';

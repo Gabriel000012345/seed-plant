@@ -4,7 +4,7 @@
         margin-bottom: 0px !important;
     }
     .accordion-group .accordion-heading {
-        position: absolute; top: 20px; left: 25px;
+        position: absolute; top: 20px; left: 25px; width: 90%;
     }
     .small-arrow .accordion-heading {
         position: absolute; left: -15px; top: 6px;
@@ -12,7 +12,7 @@
     }
     .accordion-heading .bg .fa {
         cursor: pointer;
-        width: 15px;
+        width: 100%;
     }
 </style>
 <div class="space-40 box box-category panel-default hightlight">
