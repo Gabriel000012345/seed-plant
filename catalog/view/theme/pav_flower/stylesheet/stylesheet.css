@@ -6411,7 +6411,7 @@ body.layout-boxed-lg .pav-verticalmenu:hover .navbar-default, body.layout-boxed-
 #header-main #logo-theme a {
   background: url("../image/default/logo.png") no-repeat;
   display: inline-block;
-  width: 224px;
+  width: 200px;
   height: 100px;
 }
 #header-main #logo-theme a span {
