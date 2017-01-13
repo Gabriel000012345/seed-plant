@@ -52,14 +52,14 @@
 	 	 		<type>textarea</type>
 	 	 		<lang>1</lang>
 	 	 		<default><![CDATA[
-
+x
 	 	 			<div class="about">                    
-						<div class="image space-30">        
+						<div class="image space-30">
 							<img class="img-responsive" alt="logo footer" src="image/catalog/logo_footer.png">
 						</div>
 						<div class="content">       
 							<p>
-								All times lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euis-mod tincidunt ut laoreet dolore
+								SEEDPLANT AGRO SRL este o companie distribuitoare de produse agrochimice in mediul online. Serviciile noastre se adreseaza fermierilor,fitofarmaciilor cat si persoanelor dornice si pasionate de agricultura.
 							</p>                           
 						</div>
 					</div>

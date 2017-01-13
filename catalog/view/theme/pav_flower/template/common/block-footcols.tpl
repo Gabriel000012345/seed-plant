@@ -2,7 +2,7 @@
 $config = $sconfig->get('themecontrol');
 
 $modules = $helper->getFooterModule( $blockid );
- 
+
 if( count($modules) ){
 $cols = isset($config['block_'.$blockid])&& $config['block_'.$blockid]?(int)$config['block_'.$blockid]:count($modules);	
 $class = $helper->calculateSpans( $ospans, $cols );

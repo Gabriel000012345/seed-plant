@@ -52,7 +52,7 @@ class ControllerModuleRssfeed extends Controller {
 				$data['news'][] = array(
 					'title' 	=> $item->title,
 					'content'	=> $newstring,
-					'link'		=> $item->guid
+					'link'		=> $item->link
 				);
 			} 
 			$count--;

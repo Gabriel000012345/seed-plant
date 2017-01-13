@@ -28,6 +28,12 @@
             </select>
           </div>
         </div>
+	    <div class="form-group required">
+		  <label class="col-sm-2 control-label" for="input-city"><?php echo $entry_city; ?></label>
+		  <div class="col-sm-10">
+			  <input type="text" name="city" value="<?php echo $city; ?>" placeholder="<?php echo $entry_city; ?>" id="input-city" class="form-control" />
+		  </div>
+	    </div>
         <div class="form-group required">
           <label class="col-sm-2 control-label" for="input-postcode"><?php echo $entry_postcode; ?></label>
           <div class="col-sm-10">
@@ -41,7 +47,7 @@ $('#button-quote').on('click', function() {
 	$.ajax({
 		url: 'index.php?route=total/shipping/quote',
 		type: 'post',
-		data: 'country_id=' + $('select[name=\'country_id\']').val() + '&zone_id=' + $('select[name=\'zone_id\']').val() + '&postcode=' + encodeURIComponent($('input[name=\'postcode\']').val()),
+		data: 'country_id=' + $('select[name=\'country_id\']').val() + '&zone_id=' + $('select[name=\'zone_id\']').val() + '&postcode=' + encodeURIComponent($('input[name=\'postcode\']').val()) + '&city=' + encodeURIComponent($('input[name=\'city\']').val()),
 		dataType: 'json',
 		beforeSend: function() {
 			$('#button-quote').button('loading');

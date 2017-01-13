@@ -1,5 +1,5 @@
 <?php
-define('PDF_CATALOG_TEMPLATE_CSS', '
+	define('PDF_CATALOG_TEMPLATE_CSS', '
 		<style>
              
 			h2 {
@@ -48,24 +48,24 @@ define('PDF_CATALOG_TEMPLATE_CSS', '
 		</style>
 		
 	');
-
-define('PDF_TOC_TITLE', '
+	
+	define('PDF_TOC_TITLE', '
 		<h2>{::category_title}</h2><br>
 	');
-
-define('PDF_TOC_CATEGORY', '
+	
+	define('PDF_TOC_CATEGORY', '
 		<h2>{::category_name} ({::product_cnt})</h2><br>
 	');
-
-define('PDF_CATALOG_TEMPLATE_CATEGORY', '
+	
+	define('PDF_CATALOG_TEMPLATE_CATEGORY', '
 		<h1>{::category_name}</h1>
 		<table class="pdf_table" cellpadding="0px" cellspacing="0" border="1">
 
 		<thead>
 			<tr>
-				<th class="index"><h4>Nr. Crt.</h4></th>
-				<th class="prod"><h4>Produs</h4></th>
-				<th class="price"><h4>Preturi</h4></th>
+				<th class="index"><h3>Nr. Crt.</h3></th>
+				<th class="prod"><h3>Produs</h3></th>
+				<th class="price"><h3>Preturi</h3></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -73,8 +73,8 @@ define('PDF_CATALOG_TEMPLATE_CATEGORY', '
 		</tbody>
 		</table>
 	');
-
-define('PDF_CATALOG_TEMPLATE_PRODUCT', '
+	
+	define('PDF_CATALOG_TEMPLATE_PRODUCT', '
 		<tr>
 			<td class="index"><b>{::product_cnt}</b></td>
 			<td class="prod">

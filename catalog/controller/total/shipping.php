@@ -15,6 +15,7 @@ class ControllerTotalShipping extends Controller {
 			$data['entry_country'] = $this->language->get('entry_country');
 			$data['entry_zone'] = $this->language->get('entry_zone');
 			$data['entry_postcode'] = $this->language->get('entry_postcode');
+			$data['entry_city'] = 'Oras';
 
 			$data['button_quote'] = $this->language->get('button_quote');
 			$data['button_shipping'] = $this->language->get('button_shipping');
@@ -40,6 +41,11 @@ class ControllerTotalShipping extends Controller {
 				$data['postcode'] = $this->session->data['shipping_address']['postcode'];
 			} else {
 				$data['postcode'] = '';
+			}
+			if (isset($this->session->data['shipping_address']['city'])) {
+				$data['city'] = $this->session->data['shipping_address']['city'];
+			} else {
+				$data['city'] = '';
 			}
 
 			if (isset($this->session->data['shipping_method'])) {
@@ -115,7 +121,7 @@ class ControllerTotalShipping extends Controller {
 				'address_1'      => '',
 				'address_2'      => '',
 				'postcode'       => $this->request->post['postcode'],
-				'city'           => '',
+				'city'           => $this->request->post['city'],
 				'zone_id'        => $this->request->post['zone_id'],
 				'zone'           => $zone,
 				'zone_code'      => $zone_code,
