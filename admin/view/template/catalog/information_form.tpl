@@ -208,5 +208,19 @@
   </div>
   <script type="text/javascript"><!--
 $('#language a:first').tab('show');
+
+    <?php foreach ($languages as $language) { ?>
+      CKEDITOR.replace( 'input-description<?php echo $language["language_id"]; ?>', {
+        on: {
+          instanceReady: function (ev) {
+            console.log(this.element.$);
+            if (this.element.$.innerHTML == '') {
+              var insert = CKEDITOR.getTemplates('default');
+              this.setData(insert.templates[3].html);
+            }
+          }
+        }
+      } );
+    <?php } ?>
 //--></script></div>
 <?php echo $footer; ?>

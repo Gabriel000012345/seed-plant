@@ -9,7 +9,7 @@
 		<div class="container-fluid">
 			<div class="pull-right">
 				<a href="<?php echo $ajax_clearcache; ?>" class="btn btn-info ajax-action"><?php echo $olang->get('text_clear_jscss_cache');?></a>
-			</div>	
+			</div>
 			<h1><?php echo $heading_title; ?></h1>
 			<ul class="breadcrumb clearfix">
 				<?php foreach ($breadcrumbs as $breadcrumb) { ?>
@@ -28,10 +28,10 @@
 		</div>
 		<?php } ?>
 		<form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" class="form-horizontal" id="sform">
-		 	 
+
 		 	 <div class="store-info alert alert-info">
-			 	<div class="row">	
-			 	  <label class="col-sm-1 control-label"><?php echo $olang->get('text_default_store'); ?></label>	
+			 	<div class="row">
+			 	  <label class="col-sm-1 control-label"><?php echo $olang->get('text_default_store'); ?></label>
 			 	  <div class="col-sm-3">
 			 	 	  <select class="form-control"  name="stores" id="pavstores">
 							<?php foreach($stores as $store):?>
@@ -43,21 +43,21 @@
 							<?php endforeach;?>
 						</select>
 					</div>
-					<div class="col-sm-2 control-label text-align-right"><?php echo $olang->get('text_store_theme'); ?>: <strong class=" label label-danger"><?php echo $module['default_theme']; ?></strong> </div>	
-				 
+					<div class="col-sm-2 control-label text-align-right"><?php echo $olang->get('text_store_theme'); ?>: <strong class=" label label-danger"><?php echo $module['default_theme']; ?></strong> </div>
+
 				    <div class="col-sm-6">
 					    <div class="pull-right">    <button type="submit" form="sform"  data-toggle="tooltip" title="<?php echo $button_save; ?>" class="btn save-data btn-primary"><i class="fa fa-save"></i> <?php echo $text_save;?></button>
 					        <button type="button" onclick="$('#action_type').val('save-edit');"   data-toggle="tooltip" title="<?php echo $button_save; ?>" class="btn btn-danger save-data"><i class="fa fa-save save-data"></i> <?php echo $text_saveandstay;?></button>
-					 
+
 					        <a href="<?php echo $cancel; ?>" data-toggle="tooltip" title="<?php echo $button_cancel; ?>" class="btn btn-default"><i class="fa fa-reply"></i></a>
 
-					       
-					      
-					    </div>    
-			    	</div>
-		    	
 
-				</div>	
+
+					    </div>
+			    	</div>
+
+
+				</div>
 
 
 		 	 </div>
@@ -73,7 +73,7 @@
 
 			<div class="box"  id="themepanel">
 				<div class="content">
-					
+
 					<div class="entry-theme">
 						<?php if( isset($first_installation) )  { ?>
 						<div class="label" style="float:right"><?php echo $olang->get("text_first_installation"); ?></div>
@@ -105,15 +105,15 @@
 
 							<div id="tab-pages-layout"  class="tab-pane">
 								<?php include( $adminModuleViewDir.'tab/pages-setting.tpl'); ?>
-							</div>  
+							</div>
 
 							<div id="tab-general"  class="tab-pane active">
 								<?php include( $adminModuleViewDir.'tab/general-setting.tpl'); ?>
 								<?php if( isset($theme_customizations) && is_array($theme_customizations) && isset($theme_customizations['layout']) ) { ?>
-								<h3><?php echo $olang->get('text_template_layouts_setting'); ?></h3> 
+								<h3><?php echo $olang->get('text_template_layouts_setting'); ?></h3>
 								<div class="theme-customizations">
-									<?php 
-									foreach($theme_customizations['layout'] as $bhead => $bcustoms ) {  
+									<?php
+									foreach($theme_customizations['layout'] as $bhead => $bcustoms ) {
 										$ckey = trim(strtolower($bhead));
 										$default = isset($bcustoms['default'])?trim($bcustoms['default']):"";
 										$selected = isset($module[$ckey])?$module[$ckey]:$default;
@@ -140,11 +140,11 @@
 								</div>
 								<?php } ?>
 							</div>
-								
+
 							<?php if(  isset($imodules) && is_array($imodules) ){ ?>
 							<div id="tab-imodules"  class="tab-pane">
 								<p><?php echo $olang->get('text_explain_internal_modules'); ?></p>
-								<div class="inner-modules-wrap clearfix">	 
+								<div class="inner-modules-wrap clearfix">
 									<div>
 										<ul class="nav nav-tabs" >
 										<?php  $i=0; foreach( $imodules as $key => $imod ) { ?>
@@ -155,14 +155,14 @@
 									<div class="tab-content">
 										<?php $i=0; foreach( $imodules as $key => $imod ) { ?>
 											<div id="tab-imodule-<?php echo $key;?>" class="tab-pane <?php if( $i++ == 0){ ?> active<?php } ?>">
-											<?php 
+											<?php
 												if( is_object($imod['module'])){ $imod['module'] = array($imod['module']); }
-												foreach($imod['module'] as $mkey => $mod){ 
-											?>	
+												foreach($imod['module'] as $mkey => $mod){
+											?>
 											<div class="panel panel-default">
 												<div class="panel-heading"><i class="fa fa-wrench"></i> <strong><?php echo $mod->title?></strong></div>
 												<div class="panel-body">
-													<?php 
+													<?php
 														$mod = (array)$mod;		 
 														$fields = is_object($mod['field'])?array($mod['field']):$mod['field'];		 
 														foreach( $fields as  $f ) { 
@@ -207,14 +207,14 @@
 																		<?php $text = isset($module[trim($f->name)]) ? trim($module[trim($f->name)]) : trim($f->default); ?>
 																		<input class="form-control <?php echo $color;?>" style="width:400px" value="<?php echo $text; ?>" type="text" name="themecontrol[<?php echo trim($f->name); ?>]">
 																		<i><?php echo $f->description; ?></i>
-																	<?php } else { ?>	
+																	<?php } else { ?>
 																		<?php foreach ($languages as $language) { ?>
 																		<?php $text = ( isset($module[trim($f->name)][$language['language_id']]) ? trim($module[trim($f->name)][$language['language_id']]) : $f->default );  ?>
 																		<div class="tab-pane" id="tab-lang-<?php echo $f->name;?><?php echo $language['language_id']; ?>">
 																			<input size="100" value="<?php echo $text; ?>" type="text" name="themecontrol[<?php echo trim($f->name);?>][<?php echo $language['language_id']; ?>]">
 																		 </div>
 																		<?php } ?>
-																	<?php } ?>	 
+																	<?php } ?>
 																</div>
 															</div>
 														</div>
@@ -227,7 +227,7 @@
 														<?php } ?>
 														</ul>
 														<div class="tab-content">
-															<?php 
+															<?php
 																foreach ($languages as $language) { 
 																	$text = ( isset($module[trim($f->name)][$language['language_id']]) ? trim($module[trim($f->name)][$language['language_id']]) : $f->default );
 															?>
@@ -236,41 +236,54 @@
 															</div>
 															<?php } ?>
 														</div>
-															
-														
+
+
 														<script type="text/javascript"><!--
 															<?php foreach ($languages as $language) { ?>
-															$('#w<?php echo trim($f->name);?>-<?php echo $language['language_id']; ?>').summernote({ height: 300 });
+
+                                                                CKEDITOR.replace( 'w<?php echo trim($f->name);?>-<?php echo $language['language_id']; ?>', {
+                                                                    on: {
+                                                                        instanceReady: function (ev) {
+                                                                            console.log(this.element.$);
+                                                                            if (this.element.$.innerHTML == '') {
+                                                                                var insert = CKEDITOR.getTemplates('default');
+                                                                                this.setData(insert.templates[3].html);
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                } );
+
+															// $('#w<?php echo trim($f->name);?>-<?php echo $language['language_id']; ?>').summernote({ height: 300 });
 															<?php } ?>
 														</script>
 														<?php } ?>
 														<!-- end -->
 													</div>
-													<?php } ?>	
+													<?php } ?>
 												</div>
 											</div>
-													 
+
 											<?php } ?>
 											</div>
 										<?php } ?>
 									</div>
-								</div>		
-							</div>	
+								</div>
+							</div>
 							<?php } ?>
 
 							<div id="tab-font"  class="tab-pane">
 								<?php include( $adminModuleViewDir."tab/font-setting.tpl" ); ?>
 							</div>
-				
+
 							<div id="tab-modules"  class="tab-pane">
 								<?php include( $adminModuleViewDir."tab/layout-setting.tpl" ); ?>
 							</div>
-							
+
 							<input type="hidden" name="action_type" id="action_type" value="new">
-							
+
 							<?php if( isset($samples) && $samples )  { ?>
 							<div id="tab-datasample"  class="tab-pane">
-								<?php include( $adminModuleViewDir."tab/datasample.tpl" ); ?>	
+								<?php include( $adminModuleViewDir."tab/datasample.tpl" ); ?>
 							</div>
 							<?php } ?>
 
@@ -281,18 +294,18 @@
 							<div id="tab-customcode"  class="tab-pane">
 								<?php include( $adminModuleViewDir.'tab/customize-setting.tpl' ); ?>
 							</div>
-								
+
 							<div id="tab-support" class="tab-pane">
-								<h3><?php echo $themeinfo['name'];?></h3>	
+								<h3><?php echo $themeinfo['name'];?></h3>
 								<hr>
 								<div class="theme-info panel panel-info">
 									<h4 class="panel-heading"><?php echo $olang->get('text_theme_information'); ?></h4>
 									<div class="panel-body"><?php echo $themeinfo['description'];?></div>
-								</div>	
+								</div>
 								<div class="theme-info panel panel-default">
 									<h4 class="panel-heading"><?php echo $olang->get('text_support_info'); ?></h4>
 									<div class="panel-body"><?php echo $themeinfo['support'];?></div>
-								</div>	
+								</div>
 							</div>
 							<!-- end tab-suport -->
 
@@ -303,16 +316,16 @@
 		</form>
 	</div>
 	<!-- end div container -->
-  	
+
 </div>
- 
+
 <script type="text/javascript"><!--
 	<?php foreach ($languages as $language) { ?>
 	$('#customtab-content-<?php echo $language['language_id']; ?>').summernote({ height: 300 });
 	$('#contact_customhtml<?php echo $language['language_id']; ?>').summernote({ height: 300 });
 	<?php } ?>
- 	 
-	$('#moduletabs a').click( function(){  
+
+	$('#moduletabs a').click( function(){
 		$.cookie("actived_tab", $(this).attr("href") );
 	});
 
@@ -320,12 +333,12 @@
 		$(this).find('li:first-child a').tab('show');
 	});
 
-	if($.cookie("actived_tab") !="undefined"){ 
+	if($.cookie("actived_tab") !="undefined"){
 		$('#moduletabs a').each( function(){
-			if($(this).attr("href") ==  $.cookie("actived_tab")){ 
+			if($(this).attr("href") ==  $.cookie("actived_tab")){
 				$(this).parent().tab('show');
 				$("#tab-contents > .tab-pane").removeClass('active');
-				$($.cookie("actived_tab")).addClass('active');		
+				$($.cookie("actived_tab")).addClass('active');
 				return ;
 			}
 		});
@@ -347,7 +360,7 @@
 					});
 					string = string.replace(/\,$/,"");
 					hook = hook.replace(/\,$/,"");
-				}	
+				}
 			});
 			var unhook = '';
 
@@ -360,7 +373,7 @@
 			 		// window.location.reload(true);
 			  }
 			});
-			return false; 
+			return false;
 		});
 
 		$("a.ajax-action").click( function(){
@@ -374,8 +387,8 @@
 				  success: function(){
 				  	$(".ajax-loading",_a).remove();
 				 }
-			});	 
-			return false; 
+			});
+			return false;
 		});
 	});
 
@@ -383,7 +396,7 @@
 		var $this = this;
 		$(".items-group-change",$this).hide();
 		$(".group-"+$(".type-fonts",$this).val(), this).show();
-	 
+
 		$(".type-fonts", this).change( function(){
 			$(".items-group-change",$this).hide();
 			$(".group-"+$(this).val(), $this).show();
@@ -393,12 +406,12 @@
 
 	$(".custom-popup").click( function(){
 		$('#dialog').remove();
-		
+
 		$('#content').prepend('<div id="dialog" style="padding: 3px 0px 0px 0px;"><iframe src="'+$(this).attr('href')+'" style="padding:0; margin: 0; display: block; width: 100%; height: 100%;" frameborder="no" scrolling="auto"></iframe></div>');
-		
+
 		$('#dialog').dialog({
 			title: 'Guide For Theme: <?php echo $module["default_theme"]; ?>',
-			close: function (event, ui) {},	
+			close: function (event, ui) {},
 			bgiframe: false,
 			width: 980,
 			height: 560,

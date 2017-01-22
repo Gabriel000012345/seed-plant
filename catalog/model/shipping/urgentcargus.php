@@ -102,7 +102,11 @@ class ModelShippingUrgentCargus extends Model {
                         }
                         $cart_total = $totals_array['total'];
                         if (isset($totals_array['shipping'])) {
-                            $cart_total -= $this->tax->calculate($totals['shipping'], $this->config->get('urgentcargus_tax_class_id'), $this->config->get('config_tax'));
+                            if (isset($totals['shipping'])) {
+                                $cart_total -= $this->tax->calculate($totals['shipping'], $this->config->get('urgentcargus_tax_class_id'), $this->config->get('config_tax'));
+                            } else {
+                                $cart_total -= $this->tax->calculate($totals_array['shipping'], $this->config->get('urgentcargus_tax_class_id'), $this->config->get('config_tax'));
+                            }
                         }
                     }
                 } else {
