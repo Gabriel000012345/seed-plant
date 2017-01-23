@@ -236,8 +236,32 @@
 	});
 
 	<?php foreach ($languages as $language) { ?>
-	$('#pavblog_blog_description_title_lang<?php echo $language["language_id"];?>').summernote({ height: 150 });
-	$('#pavblog_blog_description_des_lang<?php echo $language["language_id"]; ?>').summernote({ height: 150 });
+	//$('#pavblog_blog_description_title_lang<?php echo $language["language_id"];?>').summernote({ height: 150 });
+	//$('#pavblog_blog_description_des_lang<?php echo $language["language_id"]; ?>').summernote({ height: 150 });
+
+
+		CKEDITOR.replace( 'pavblog_blog_description_title_lang<?php echo $language["language_id"];?>', {
+			on: {
+				instanceReady: function (ev) {
+					console.log(this.element.$);
+					if (this.element.$.innerHTML == '') {
+						var insert = CKEDITOR.getTemplates('default');
+						this.setData(insert.templates[3].html);
+					}
+				}
+			}
+		} );
+		CKEDITOR.replace( 'pavblog_blog_description_des_lang<?php echo $language["language_id"]; ?>', {
+			on: {
+				instanceReady: function (ev) {
+					console.log(this.element.$);
+					if (this.element.$.innerHTML == '') {
+						var insert = CKEDITOR.getTemplates('default');
+						this.setData(insert.templates[3].html);
+					}
+				}
+			}
+		} );
 	<?php } ?>
 	
 </script>
