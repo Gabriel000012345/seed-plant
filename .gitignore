@@ -7,4 +7,4 @@ system/cache
 .htaccess
 admin/error_log
 image/cache/*
-
+.idea/vcs.xml
