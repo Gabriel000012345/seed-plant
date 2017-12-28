@@ -1,0 +1,8 @@
+<ul class="social list-unstyled">
+	<li class="over social-facebook"><a href="#" title="Facebook"><em class="fa fa-facebook"> </em></a></li>
+	<li class="over social-twitter"><a href="#" title="Twitter"><em class="rhb fa fa-twitter"> </em></a></li>
+	<li class="over social-google"><a href="#" title="Google"><em class="rhb fa fa-google-plus"> </em></a></li>
+	<li class="over social-pin"><a href="#" title="Pinterest"><em class="rhb fa fa-pinterest"> </em></a></li>
+	<li class="over social-rss"><a href="#" title="Twitter"><em class="rhb fa fa-rss"> </em></a></li>
+</ul>
+

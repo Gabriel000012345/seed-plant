@@ -1,0 +1,502 @@
+2017-01-11 18:58:00 - MOD: Modification Default
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 34
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+LINE: 92
+LINE: 104
+LINE: 142
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 35
+LINE: 41
+LINE: 47
+FILE: system/library/template/basic.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+----------------------------------------------------------------
+2017-01-11 21:15:11 - MOD: Modification Default
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 34
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+LINE: 92
+LINE: 104
+LINE: 142
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 35
+LINE: 41
+LINE: 47
+FILE: system/library/template/basic.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+----------------------------------------------------------------
+MOD: Urgent Cargus
+FILE: admin/language/en-gb/en-gb.php
+CODE: <?php
+LINE: 8
+FILE: admin/language/ro-ro/ro-ro.php
+CODE: <?php
+LINE: 8
+FILE: admin/view/template/common/header.tpl
+CODE: </head>
+LINE: 35
+FILE: admin/controller/common/column_left.php
+CODE: $this->load->model('sale/order');
+NOT FOUND!
+FILE: admin/view/template/common/menu.tpl
+CODE: <li id="reports">
+LINE: 177
+FILE: admin/controller/common/menu.php
+CODE: $this->load->language('common/menu');
+LINE: 14
+FILE: catalog/view/theme/default/template/common/header.tpl
+CODE: </head>
+LINE: 39
+FILE: catalog/view/theme/pav_flower/template/common/header.tpl
+CODE: </head>
+NOT FOUND!
+FILE: catalog/controller/checkout/confirm.php
+CODE: if (isset($this->session->data['shipping_method']['title'])) {
+LINE: 199
+FILE: catalog/model/total/coupon.php
+CODE: public function getTotal(&$total_data, &$total, &$taxes) {
+NOT FOUND!
+FILE: admin/controller/sale/order.php
+CODE: $results = $this->model_sale_order->getOrders($filter_data);
+LINE: 164
+FILE: admin/view/template/sale/order_list.tpl
+CODE: <div class="pull-right">
+LINE: 7
+----------------------------------------------------------------
+2017-01-11 21:15:41 - MOD: Modification Default
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 34
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+LINE: 92
+LINE: 104
+LINE: 142
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 35
+LINE: 41
+LINE: 47
+FILE: system/library/template/basic.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+----------------------------------------------------------------
+MOD: Urgent Cargus
+FILE: admin/language/en-gb/en-gb.php
+CODE: <?php
+LINE: 8
+FILE: admin/language/ro-ro/ro-ro.php
+CODE: <?php
+LINE: 8
+FILE: admin/view/template/common/header.tpl
+CODE: </head>
+LINE: 35
+FILE: admin/controller/common/column_left.php
+CODE: $this->load->model('sale/order');
+NOT FOUND!
+FILE: admin/view/template/common/menu.tpl
+CODE: <li id="reports">
+LINE: 177
+FILE: admin/controller/common/menu.php
+CODE: $this->load->language('common/menu');
+LINE: 14
+FILE: catalog/view/theme/default/template/common/header.tpl
+CODE: </head>
+LINE: 39
+FILE: catalog/view/theme/pav_flower/template/common/header.tpl
+CODE: </head>
+NOT FOUND!
+FILE: catalog/controller/checkout/confirm.php
+CODE: if (isset($this->session->data['shipping_method']['title'])) {
+LINE: 199
+FILE: catalog/model/total/coupon.php
+CODE: public function getTotal(&$total_data, &$total, &$taxes) {
+NOT FOUND!
+FILE: admin/controller/sale/order.php
+CODE: $results = $this->model_sale_order->getOrders($filter_data);
+LINE: 164
+FILE: admin/view/template/sale/order_list.tpl
+CODE: <div class="pull-right">
+LINE: 7
+----------------------------------------------------------------
+2017-01-12 16:33:32 - MOD: Modification Default
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 34
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+LINE: 92
+LINE: 104
+LINE: 142
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 35
+LINE: 41
+LINE: 47
+FILE: system/library/template/basic.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+----------------------------------------------------------------
+MOD: Urgent Cargus
+FILE: admin/language/en-gb/en-gb.php
+CODE: <?php
+LINE: 8
+FILE: admin/language/ro-ro/ro-ro.php
+CODE: <?php
+LINE: 8
+FILE: admin/view/template/common/header.tpl
+CODE: </head>
+LINE: 35
+FILE: admin/controller/common/column_left.php
+CODE: $this->load->model('sale/order');
+NOT FOUND!
+FILE: admin/view/template/common/menu.tpl
+CODE: <li id="reports">
+LINE: 177
+FILE: admin/controller/common/menu.php
+CODE: $this->load->language('common/menu');
+LINE: 14
+FILE: catalog/view/theme/default/template/common/header.tpl
+CODE: </head>
+LINE: 39
+FILE: catalog/view/theme/pav_flower/template/common/header.tpl
+CODE: </head>
+NOT FOUND!
+FILE: catalog/controller/checkout/confirm.php
+CODE: if (isset($this->session->data['shipping_method']['title'])) {
+LINE: 199
+FILE: catalog/model/total/coupon.php
+CODE: public function getTotal(&$total_data, &$total, &$taxes) {
+NOT FOUND!
+FILE: admin/controller/sale/order.php
+CODE: $results = $this->model_sale_order->getOrders($filter_data);
+LINE: 164
+FILE: admin/view/template/sale/order_list.tpl
+CODE: <div class="pull-right">
+LINE: 7
+----------------------------------------------------------------
+2017-01-13 11:15:47 - MOD: Modification Default
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 34
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+LINE: 92
+LINE: 104
+LINE: 142
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 35
+LINE: 41
+LINE: 47
+FILE: system/library/template/basic.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+----------------------------------------------------------------
+MOD: Urgent Cargus
+FILE: admin/language/en-gb/en-gb.php
+CODE: <?php
+LINE: 8
+FILE: admin/language/ro-ro/ro-ro.php
+CODE: <?php
+LINE: 8
+FILE: admin/view/template/common/header.tpl
+CODE: </head>
+LINE: 35
+FILE: admin/controller/common/column_left.php
+CODE: $this->load->model('sale/order');
+NOT FOUND!
+FILE: admin/view/template/common/menu.tpl
+CODE: <li id="reports">
+LINE: 177
+FILE: admin/controller/common/menu.php
+CODE: $this->load->language('common/menu');
+LINE: 14
+FILE: catalog/view/theme/default/template/common/header.tpl
+CODE: </head>
+LINE: 39
+FILE: catalog/view/theme/pav_flower/template/common/header.tpl
+CODE: </head>
+NOT FOUND!
+FILE: catalog/controller/checkout/confirm.php
+CODE: if (isset($this->session->data['shipping_method']['title'])) {
+LINE: 199
+FILE: catalog/model/total/coupon.php
+CODE: public function getTotal(&$total_data, &$total, &$taxes) {
+NOT FOUND!
+FILE: admin/controller/sale/order.php
+CODE: $results = $this->model_sale_order->getOrders($filter_data);
+LINE: 164
+FILE: admin/view/template/sale/order_list.tpl
+CODE: <div class="pull-right">
+LINE: 7
+----------------------------------------------------------------
+2017-01-14 19:50:24 - MOD: Modification Default
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 34
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+LINE: 92
+LINE: 104
+LINE: 142
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 35
+LINE: 41
+LINE: 47
+FILE: system/library/template/basic.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+----------------------------------------------------------------
+MOD: Urgent Cargus
+FILE: admin/language/en-gb/en-gb.php
+CODE: <?php
+LINE: 8
+FILE: admin/language/ro-ro/ro-ro.php
+CODE: <?php
+LINE: 8
+FILE: admin/view/template/common/header.tpl
+CODE: </head>
+LINE: 35
+FILE: admin/controller/common/column_left.php
+CODE: $this->load->model('sale/order');
+NOT FOUND!
+FILE: admin/view/template/common/menu.tpl
+CODE: <li id="reports">
+LINE: 177
+FILE: admin/controller/common/menu.php
+CODE: $this->load->language('common/menu');
+LINE: 14
+FILE: catalog/view/theme/default/template/common/header.tpl
+CODE: </head>
+LINE: 39
+FILE: catalog/view/theme/pav_flower/template/common/header.tpl
+CODE: </head>
+NOT FOUND!
+FILE: catalog/controller/checkout/confirm.php
+CODE: if (isset($this->session->data['shipping_method']['title'])) {
+LINE: 199
+FILE: catalog/model/total/coupon.php
+CODE: public function getTotal(&$total_data, &$total, &$taxes) {
+NOT FOUND!
+FILE: admin/controller/sale/order.php
+CODE: $results = $this->model_sale_order->getOrders($filter_data);
+LINE: 164
+FILE: admin/view/template/sale/order_list.tpl
+CODE: <div class="pull-right">
+LINE: 7
+----------------------------------------------------------------
+2017-08-23 14:13:05 - MOD: Modification Default
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 34
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+LINE: 92
+LINE: 104
+LINE: 142
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 35
+LINE: 41
+LINE: 47
+FILE: system/library/template/basic.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+----------------------------------------------------------------
+MOD: Urgent Cargus
+FILE: admin/language/en-gb/en-gb.php
+CODE: <?php
+LINE: 8
+FILE: admin/language/ro-ro/ro-ro.php
+CODE: <?php
+LINE: 8
+FILE: admin/view/template/common/header.tpl
+CODE: </head>
+LINE: 35
+FILE: admin/controller/common/column_left.php
+CODE: $this->load->model('sale/order');
+NOT FOUND!
+FILE: admin/view/template/common/menu.tpl
+CODE: <li id="reports">
+LINE: 177
+FILE: admin/controller/common/menu.php
+CODE: $this->load->language('common/menu');
+LINE: 14
+FILE: catalog/view/theme/default/template/common/header.tpl
+CODE: </head>
+LINE: 39
+FILE: catalog/view/theme/pav_flower/template/common/header.tpl
+CODE: </head>
+NOT FOUND!
+FILE: catalog/controller/checkout/confirm.php
+CODE: if (isset($this->session->data['shipping_method']['title'])) {
+LINE: 199
+FILE: catalog/model/total/coupon.php
+CODE: public function getTotal(&$total_data, &$total, &$taxes) {
+NOT FOUND!
+FILE: admin/controller/sale/order.php
+CODE: $results = $this->model_sale_order->getOrders($filter_data);
+LINE: 164
+FILE: admin/view/template/sale/order_list.tpl
+CODE: <div class="pull-right">
+LINE: 7
+----------------------------------------------------------------
+2017-08-23 14:13:11 - MOD: Modification Default
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 34
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+LINE: 92
+LINE: 104
+LINE: 142
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 35
+LINE: 41
+LINE: 47
+FILE: system/library/template/basic.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+----------------------------------------------------------------
+MOD: Urgent Cargus
+FILE: admin/language/en-gb/en-gb.php
+CODE: <?php
+LINE: 8
+FILE: admin/language/ro-ro/ro-ro.php
+CODE: <?php
+LINE: 8
+FILE: admin/view/template/common/header.tpl
+CODE: </head>
+LINE: 35
+FILE: admin/controller/common/column_left.php
+CODE: $this->load->model('sale/order');
+NOT FOUND!
+FILE: admin/view/template/common/menu.tpl
+CODE: <li id="reports">
+LINE: 177
+FILE: admin/controller/common/menu.php
+CODE: $this->load->language('common/menu');
+LINE: 14
+FILE: catalog/view/theme/default/template/common/header.tpl
+CODE: </head>
+LINE: 39
+FILE: catalog/view/theme/pav_flower/template/common/header.tpl
+CODE: </head>
+NOT FOUND!
+FILE: catalog/controller/checkout/confirm.php
+CODE: if (isset($this->session->data['shipping_method']['title'])) {
+LINE: 199
+FILE: catalog/model/total/coupon.php
+CODE: public function getTotal(&$total_data, &$total, &$taxes) {
+NOT FOUND!
+FILE: admin/controller/sale/order.php
+CODE: $results = $this->model_sale_order->getOrders($filter_data);
+LINE: 164
+FILE: admin/view/template/sale/order_list.tpl
+CODE: <div class="pull-right">
+LINE: 7
+----------------------------------------------------------------
+2017-12-27 11:29:16 - MOD: Modification Default
+FILE: system/engine/action.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 34
+FILE: system/engine/loader.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 41
+LINE: 92
+LINE: 104
+LINE: 142
+FILE: system/library/config.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 23
+FILE: system/library/language.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 35
+LINE: 41
+LINE: 47
+FILE: system/library/template/basic.php
+REGEX: ~(require|include)(_once)?\(([^)]+)~
+LINE: 18
+----------------------------------------------------------------
+MOD: Urgent Cargus
+FILE: admin/language/en-gb/en-gb.php
+CODE: <?php
+LINE: 8
+FILE: admin/language/ro-ro/ro-ro.php
+CODE: <?php
+LINE: 8
+FILE: admin/view/template/common/header.tpl
+CODE: </head>
+LINE: 35
+FILE: admin/controller/common/column_left.php
+CODE: $this->load->model('sale/order');
+NOT FOUND!
+FILE: admin/view/template/common/menu.tpl
+CODE: <li id="reports">
+LINE: 178
+FILE: admin/controller/common/menu.php
+CODE: $this->load->language('common/menu');
+LINE: 14
+FILE: catalog/view/theme/default/template/common/header.tpl
+CODE: </head>
+LINE: 39
+FILE: catalog/view/theme/pav_flower/template/common/header.tpl
+CODE: </head>
+NOT FOUND!
+FILE: catalog/controller/checkout/confirm.php
+CODE: if (isset($this->session->data['shipping_method']['title'])) {
+LINE: 199
+FILE: catalog/model/total/coupon.php
+CODE: public function getTotal(&$total_data, &$total, &$taxes) {
+NOT FOUND!
+FILE: admin/controller/sale/order.php
+CODE: $results = $this->model_sale_order->getOrders($filter_data);
+LINE: 164
+FILE: admin/view/template/sale/order_list.tpl
+CODE: <div class="pull-right">
+LINE: 7
+----------------------------------------------------------------

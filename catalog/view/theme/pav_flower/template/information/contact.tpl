@@ -199,7 +199,10 @@
 </div>
 </div>
  <?php // Jquery googlemap api v3?>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&language=en"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyzalPEuPnur3UbaJrB2T-npJLuZ54gdw&callback=initMap"
+        type="text/javascript"></script>
+
+
     <script type="text/javascript" src="catalog/view/javascript/gmap/gmap3.min.js"></script>
     <script type="text/javascript" src="catalog/view/javascript/gmap/gmap3.infobox.js"></script>
     <script type="text/javascript">

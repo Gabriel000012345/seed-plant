@@ -1,0 +1,42 @@
+2017-05-09 22:17:50 - 420720 - addOrderHistory() - Order id:12 passed
+2017-05-09 22:17:50 - 420720 - ebaySaleStockReduce() - Is stock update needed (Item ID: 54,SKU: )
+2017-05-09 22:17:50 - 420720 - ebaySaleStockReduce() - Send item ID: "54", Stock: "5000000" to decideEbayStockAction()
+2017-05-09 22:17:50 - 420720 - decideEbayStockAction() - Product ID: 54, Current stock: 5000000
+2017-05-09 22:17:50 - 420720 - getEbayItemId() - Product ID: 54
+2017-05-09 22:17:50 - 420720 - No link found - getEbayItemId()
+2017-05-23 13:08:24 - 744519 - addOrderHistory() - Order id:13 passed
+2017-05-23 13:08:24 - 744519 - ebaySaleStockReduce() - Is stock update needed (Item ID: 191,SKU: )
+2017-05-23 13:08:24 - 744519 - ebaySaleStockReduce() - Send item ID: "191", Stock: "500000" to decideEbayStockAction()
+2017-05-23 13:08:24 - 744519 - decideEbayStockAction() - Product ID: 191, Current stock: 500000
+2017-05-23 13:08:24 - 744519 - getEbayItemId() - Product ID: 191
+2017-05-23 13:08:24 - 744519 - No link found - getEbayItemId()
+2017-05-29 12:09:51 - 12402 - addOrderHistory() - Order id:14 passed
+2017-05-29 12:09:51 - 12402 - ebaySaleStockReduce() - Is stock update needed (Item ID: 76,SKU: )
+2017-05-29 12:09:51 - 12402 - ebaySaleStockReduce() - Send item ID: "76", Stock: "5000000" to decideEbayStockAction()
+2017-05-29 12:09:51 - 12402 - decideEbayStockAction() - Product ID: 76, Current stock: 5000000
+2017-05-29 12:09:51 - 12402 - getEbayItemId() - Product ID: 76
+2017-05-29 12:09:51 - 12402 - No link found - getEbayItemId()
+2017-06-13 14:52:38 - 294604 - addOrderHistory() - Order id:15 passed
+2017-06-13 14:52:38 - 294604 - ebaySaleStockReduce() - Is stock update needed (Item ID: 90,SKU: )
+2017-06-13 14:52:38 - 294604 - ebaySaleStockReduce() - Send item ID: "90", Stock: "5000000" to decideEbayStockAction()
+2017-06-13 14:52:38 - 294604 - decideEbayStockAction() - Product ID: 90, Current stock: 5000000
+2017-06-13 14:52:38 - 294604 - getEbayItemId() - Product ID: 90
+2017-06-13 14:52:38 - 294604 - No link found - getEbayItemId()
+2017-07-11 19:23:06 - 594290 - addOrderHistory() - Order id:16 passed
+2017-07-11 19:23:06 - 594290 - ebaySaleStockReduce() - Is stock update needed (Item ID: 527,SKU: )
+2017-07-11 19:23:06 - 594290 - ebaySaleStockReduce() - Send item ID: "527", Stock: "5000000" to decideEbayStockAction()
+2017-07-11 19:23:06 - 594290 - decideEbayStockAction() - Product ID: 527, Current stock: 5000000
+2017-07-11 19:23:06 - 594290 - getEbayItemId() - Product ID: 527
+2017-07-11 19:23:06 - 594290 - No link found - getEbayItemId()
+2017-07-12 17:37:44 - 466808 - addOrderHistory() - Order id:16 passed
+2017-07-12 17:37:44 - 466808 - ebaySaleStockReduce() - Is stock update needed (Item ID: 527,SKU: )
+2017-07-12 17:37:44 - 466808 - ebaySaleStockReduce() - Send item ID: "527", Stock: "5000000" to decideEbayStockAction()
+2017-07-12 17:37:44 - 466808 - decideEbayStockAction() - Product ID: 527, Current stock: 5000000
+2017-07-12 17:37:44 - 466808 - getEbayItemId() - Product ID: 527
+2017-07-12 17:37:44 - 466808 - No link found - getEbayItemId()
+2017-07-12 17:37:52 - 467025 - addOrderHistory() - Order id:16 passed
+2017-07-12 17:37:52 - 467025 - ebaySaleStockReduce() - Is stock update needed (Item ID: 527,SKU: )
+2017-07-12 17:37:52 - 467025 - ebaySaleStockReduce() - Send item ID: "527", Stock: "5000000" to decideEbayStockAction()
+2017-07-12 17:37:52 - 467025 - decideEbayStockAction() - Product ID: 527, Current stock: 5000000
+2017-07-12 17:37:52 - 467025 - getEbayItemId() - Product ID: 527
+2017-07-12 17:37:52 - 467025 - No link found - getEbayItemId()

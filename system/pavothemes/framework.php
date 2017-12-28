@@ -245,7 +245,7 @@ if(!class_exists("ThemeControlHelper") ) {
 		 *  add script files to collection.
 		 */
 		public function addScript( $path ){
-			$this->_jsFiles[$path] = $path;
+			$this->_jsFiles[$path] = HTTPS_SERVER . $path;
 		}
 
 		/**
@@ -268,7 +268,7 @@ if(!class_exists("ThemeControlHelper") ) {
 		 *  add single css file to collection
 		 */
 		public function addCss( $path ){
-			$this->_cssFiles[md5($path)] =  array( 'href' => $path, 'rel' => 'stylesheet', 'media' => 'screen' );
+			$this->_cssFiles[md5($path)] =  array( 'href' => HTTPS_SERVER . $path, 'rel' => 'stylesheet', 'media' => 'screen' );
 		}
 		
 		/**

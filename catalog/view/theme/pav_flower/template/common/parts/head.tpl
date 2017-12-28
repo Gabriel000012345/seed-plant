@@ -115,11 +115,52 @@ $helper->addCssList( $styles );
     </style>
     <?php } ?>
     <!-- FONT -->
+    <?php foreach ($analytics as $analytic) { ?>
+     <?php echo $analytic; ?>
+    <?php } ?>
     <?php if( isset($google_analytics) ){ ?>
-    <?php echo $google_analytics; ?>
+      <?php echo $google_analytics; ?>
     <?php } ?>
 
     <?php if( isset($themeConfig['theme_width']) && $themeConfig['theme_width'] &&  $themeConfig['theme_width'] != 'auto' ) { ?>
     <style> body .container{max-width:<?php echo $themeConfig['theme_width'];?>; width:auto;} </style>
     <?php } ?>
+    
+    
+    
+    <script>
+<!--        if (document.addEventListener !== undefined) {
+          // Not IE
+          document.addEventListener('click', checkSelection, false);
+        } else {
+          // IE
+          document.attachEvent('onclick', checkSelection);
+        }
+
+        function checkSelection() {
+            var sel = {};
+            if (window.getSelection) {
+                // Mozilla
+                sel = window.getSelection();
+            } else if (document.selection) {
+                // IE
+                sel = document.selection.createRange();
+            }
+
+            // Mozilla
+            if (sel.rangeCount) {
+                //sel.removeAllRanges();
+                sel.collapseToStart();
+                return;
+            }
+
+            // IE
+            if (sel.text > '') {
+                document.selection.empty();
+                return;
+            }
+        }
+ -->    </script>
+    
+    
   </head>

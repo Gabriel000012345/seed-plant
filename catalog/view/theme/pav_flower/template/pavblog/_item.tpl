@@ -1,63 +1,39 @@
-<div class="blog-item border-bottom space-padding-tb-20">
-	<div class="row">
-		<?php if( $cat_show_title ) { ?>
-		<div class="col-md-4 col-sm-5 col-xs-12">
-			<div class="image">
-			<?php if( $blog['thumb'] && $cat_show_image )  { ?>
-			<img src="<?php echo $blog['thumb'];?>" title="<?php echo $blog['title'];?>" class="img-responsive"/>
-			<?php } ?>
+<style>
+	.img-responsive {
+		border-radius: 50%;
+		border: 1px solid #ebebeb;
+		overflow: hidden;
+	}
+</style>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 product-col border">
+	<div class="product-block radius-1x clearfix">
+		<?php if( $blog['thumb'] && $cat_show_image )  { ?>
+		<div class="image">
+			<div class="product-img">
+				<a class="img" title="ACTARA 25WG" href="<?php echo $blog['link'];?>">
+					<img class="img-responsive" src="<?php echo $blog['thumb'];?>" title="<?php echo $blog['title'];?>" alt="<?php echo $blog['title'];?>">
+				</a>
 			</div>
 		</div>
+		<?php } ?>
 
-		<div class="blog-meta col-lg-8 col-md-8 col-sm-7 col-xs-12">
-			<ul class="list-inline">
-			  	<li><?php if( $blog_show_author ) { ?>
-				<span class="author"><b><?php echo $objlang->get("text_write_by");?></b> <?php echo $blog['author'];?></span>
-				<?php } ?>
-				</li>
-
-				<li>
-				<?php if( $blog_show_category ) { ?>
-				<span class="publishin">
-					<b><?php echo $objlang->get("text_published_in");?></b>
-					<a class="color" href="<?php echo $blog['category_link'];?>" title="<?php echo $blog['category_title'];?>"><?php echo $blog['category_title'];?></a>
-				</span>
-				<?php } ?>	
-				</li>
-
-				<li>
-				<?php if( $blog_show_created ) { ?>
-				<span class="created"><b><?php echo $objlang->get("text_created_date");?></b> <?php echo $blog['created'];?></span>
-				<?php } ?>
-				</li>
-
-				<li>
-				<?php if( $blog_show_hits ) { ?>
-				<span class="hits"><b><?php echo $objlang->get("text_hits");?></b> <?php echo $blog['hits'];?></span>
-				<?php } ?>		
-				</li>
-
-				<li>
-				<?php if( $blog_show_comment_counter ) { ?>
-				<span class="comment_count"><b><?php echo $objlang->get("text_comment_count");?></b> <?php echo $blog['comment_count'];?></span>
-				<?php } ?>	
-				</li>
-			</ul>	
-			<div class="blog-body">
-				<div class="blog-header">
-					<h3 class="blog-title">	<a href="<?php echo $blog['link'];?>" title="<?php echo $blog['title'];?>"><?php echo $blog['title'];?></a></h3>
-				<?php } ?>
+		<div class="product-meta">
+			<h3><a href="<?php echo $blog['link'];?>"><?php echo $blog['title'];?></a></h3>
+			<?php if( $cat_show_description ) { ?>
+				<div><?php echo utf8_substr( $blog['description'],0, 180 );?></div>
+			<?php } ?>
+            <?php if( $cat_show_readmore ) { ?>
+				<div class="action add-links clearfix">
+				<div class="cart">
+					<button data-loading-text="Loading..." class="btn-action radius-5" type="button" onclick="window.location('<?php echo $blog['link'];?>')">
+						<span><?php echo $objlang->get('text_readmore'); ?></span>
+						<i class="fa fa-external-link"></i>
+					</button>
 				</div>
-			<?php if( $cat_show_description ) {?>
-				<div class="description">
-					<?php echo utf8_substr( $blog['description'],0, 180 );?>...
-				</div>
-				<?php } ?>
-			<?php if( $cat_show_readmore ) { ?>
-					<a href="<?php echo $blog['link'];?>" class="btn btn-primary btn-arrow-right"><?php echo $objlang->get('text_readmore');?></a>
-				<?php } ?>
-			</div>		
-		</div>		
+			</div>
+			<?php } ?>
+		</div>
 	</div>
 </div>
+
 

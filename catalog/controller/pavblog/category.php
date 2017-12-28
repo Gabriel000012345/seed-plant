@@ -219,11 +219,11 @@
 						$blogs[$key]['thumb_small'] = '';
 						$blogs[$key]['thumb_xsmall'] = '';
 					}
-					if( $key < $limit_leading_blogs ){
-						$blogs[$key]['thumb'] = $blogs[$key][$limageType];
-					}else {
+//					if( $key < $limit_leading_blogs ){
+//						$blogs[$key]['thumb'] = $blogs[$key][$limageType];
+//					}else {
 						$blogs[$key]['thumb'] = $blogs[$key][$simageType];
-					}					
+//					}
 					
 					$blogs[$key]['description'] = html_entity_decode($blog['description'], ENT_QUOTES, 'UTF-8');
 					$blogs[$key]['author'] = isset($users[$blog['user_id']])?$users[$blog['user_id']]:$this->language->get('text_none_author');
@@ -239,8 +239,8 @@
 				}
 				
 				
-				$leading_blogs 		 = array_slice( $blogs,0, $limit_leading_blogs );
-				$secondary_blogs 	 = array_splice( $blogs, $limit_leading_blogs, count($blogs) );
+//				$leading_blogs 		 = array_slice( $blogs,0, $limit_leading_blogs );
+//				$secondary_blogs 	 = array_splice( $blogs, $limit_leading_blogs, count($blogs) );
 		
 				
 				if (version_compare(VERSION, '2.1.0.1') >= 0) {
@@ -267,8 +267,7 @@
 				}
 
 				$this->mdata['total'] = $total;
-				$this->mdata['leading_blogs'] = $leading_blogs;
-				$this->mdata['secondary_blogs'] = $secondary_blogs;
+				$this->mdata['blogs'] = $blogs;
 				$this->mdata['category_rss'] =  $this->url->link( 'pavblog/category/rss', "blogcategory_id=".$category_id );
 				
 				$pagination = new Pagination();

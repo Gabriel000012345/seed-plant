@@ -44,7 +44,7 @@ class Document {
 
 	public function addStyle($href, $rel = 'stylesheet', $media = 'screen') {
 		$this->styles[$href] = array(
-			'href'  => $href,
+			'href'  => HTTPS_SERVER . $href,
 			'rel'   => $rel,
 			'media' => $media
 		);
@@ -55,7 +55,7 @@ class Document {
 	}
 
 	public function addScript($href, $postion = 'header') {
-		$this->scripts[$postion][$href] = $href;
+		$this->scripts[$postion][$href] = HTTPS_SERVER . $href;
 	}
 
 	public function getScripts($postion = 'header') {

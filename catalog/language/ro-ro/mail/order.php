@@ -1,7 +1,7 @@
 <?php
 // Text
 $_['text_new_subject']          = '%s - Comanda %s';
-$_['text_new_greeting']         = 'Îți mulțumim pentru interesul tău în produsele %s. Comanda ta a fost primită și va fi procesată imediat ce plata a fost confirmată.';
+$_['text_new_greeting']         = 'Îți mulțumim pentru interesul tău în produsele %s. Comanda ta a fost primită și va fi procesată in scurt timp';
 $_['text_new_received']         = 'Ai primit o nouă comandă.';
 $_['text_new_link']             = 'Pentru a viziona comanda ta, fă click pe urmatorul link:';
 $_['text_new_order_detail']     = 'Detaliile comenzii';

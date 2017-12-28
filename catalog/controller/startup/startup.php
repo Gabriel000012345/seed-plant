@@ -17,7 +17,8 @@ class ControllerStartupStartup extends Controller {
 		}
 		
 		if (!$query->num_rows) {
-			$this->config->set('config_url', HTTP_SERVER);
+			$this->config->set('config_ssl', HTTP_SERVER);
+      $this->config->set('config_url', HTTP_SERVER);
 		}
 		
 		// Settings
